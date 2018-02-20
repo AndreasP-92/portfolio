@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var app = express();
 
-// Define the port to run on
+// Defining the port
 app.set('port', 3000);
 
 app.use(express.static(path.join(__dirname, '/public_html')));
