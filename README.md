@@ -1,4 +1,4 @@
-#Mangler:
+## Mangler:
 
 * Lav skabelon kontakt
 * Indsæt de manglende projekter
@@ -8,11 +8,11 @@
 * domain navn: mrcaptain.info
 * https://www.unoeuro.com/ Køb domain
 
-## Done:
+# Done:
 
 * Arbejd på serveren, dvs implamenter alle serverene til 1 server
 
-# Idéer:
+## Idéer:
 
 * Find en måde at kunne gå tilbage til index på alle sider via javascript
 * Find en mere brugervenlig måde at finde projekter på når der kommer mange på
@@ -32,6 +32,5 @@
     - html
     - javascript
 
-# Husk:
+## Husk:
 
-* lav index til forside.html på opgave siderne
