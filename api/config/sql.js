@@ -5,7 +5,7 @@ module.exports = {
         return mysql.createConnection({
             'host': '207.154.211.14',
             'user': 'root',
-            'password': 'bjarmi312',
+            'password': '1234',
             'database': 'hifi'
         });
     }
