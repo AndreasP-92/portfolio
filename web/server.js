@@ -1,5 +1,5 @@
 const browserSync = require('browser-sync').create();
-browserSync.watch('./public/**/*').on('change', browserSync.reload);
+browserSync.watch('./public_html/**/*').on('change', browserSync.reload);
 browserSync.init({
-    'server': './public'
+    'server': './public_html'
 });
