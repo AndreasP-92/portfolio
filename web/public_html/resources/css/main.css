@@ -328,14 +328,27 @@ main:after{
     border-right: 1px solid #d6e1e5;
     padding:50px 20px;
 }
+#egenskaber #a2 img{
+    width:75%;
+    margin: auto;
+    margin-bottom: 20px;
+    display:block;
+}
 
 #egenskaber #a3{
     width:45%;
     float:right;
     padding: 50px 20px;
 }
+#egenskaber #a3 img{
+    width:87%;
+    margin: auto;
+    margin-bottom: 20px;
+    display:block;
+}
 #a2 h3, #a3 h3{
     padding-bottom:20px;
+    text-align: center;
 }
 #egenskaber div li{
     color: #4e5a5f;
