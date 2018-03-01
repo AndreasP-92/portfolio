@@ -1,0 +1,32 @@
+{
+  "name": "portfolie_0.2",
+  "version": "1.0.0",
+  "description": "* Find en måde at kunne gå tilbage til index på alle sider via javascript\r * Find en mere brugervenlig måde at finde projekter på når der kommer mange på\r * DropDown menu til flag\r * alert('Beskrivelse') til projekt li el. a \r * Erfaringer\r     - Bootstrap\r     - ?Wordpress?\r     - phpmyadmin\r     - brackets\r     - visual studios\r     - MySQL workbench\r     - \r * Programmerings sprog\r     - css\r     - SQL\r     - html\r     - javascript",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreasP-92/portfolie.git"
+  },
+  "keywords": [
+    "portfolie"
+  ],
+  "author": "andreas pedersen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreasP-92/portfolie/issues"
+  },
+  "homepage": "https://github.com/AndreasP-92/portfolie#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "mysql2": "^1.5.2",
+    "nodemon": "^1.15.1",
+    "password-hash": "^1.2.2",
+    "path": "^0.12.7"
+  }
+}

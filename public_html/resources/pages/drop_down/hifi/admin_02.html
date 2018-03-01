@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <hr>
+        
+                <section class="row col-sm-12 demo-content">
+                    <h2>Produkt Administration</h2>
+                    <section id="inner-section1" class="celle col-sm-12 demo-content inner-section admin-section">
+                        <div class='container'>
+                            <div class='row'>
+                                <div class='col-sm-10 col-sm-offset-1'>
+                                    <form>
+                                        <div class='row'>
+                                            <div id="adminform">
+                                                <div class='form-group'>
+                                                    <label for='navn'>Navn</label>
+                                                    <input type='text' id="navn" />
+                                                </div>
+                                                <div class='form-group'>
+                                                    <label for='varenr'>Varenr</label>
+                                                    <input type='text' id="varenr" />
+                                                </div>
+                                                <div class='form-group'>
+                                                    <label for='besrkivelse'>Beskrivelse</label>
+                                                    <input type='text' id="beskrivelse" />
+                                                </div>
+                                                <div class='form-group'>
+                                                    <label for='pris'>Pris</label>
+                                                    <input type='text' id="pris" />
+                                                </div>
+                                                <div class='form-group'>
+                                                    <label for='kategori'>Kategori</label>
+                                                    <!-- <input type='text' id="kategori"/> -->
+                                                    <select name="kategori" id="kategori"></select>
+                                                </div>
+                                                <div class='form-group'>
+                                                    <label for='producent'>Producent</label>
+                                                    <!-- <input type='text' id="producent"/> -->
+                                                    <select name="producent" id="producent"></select>
+                                                </div>
+                                                <div>
+                                                    <button class='btn btn-primary' id="gem">Gem</button>
+                                                    <a href="produkt-admin.html" class='btn btn-primary' id="annuller">Annuller</a>
+                                                </div>
+                                            </div>
+        
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <span id="udfyldningMangler"></span>
+                    </section>
+        
+                    <section id="produktliste">
+                        <h2>Eksisterende Produkter</h2>
+                        <!-- <table class="table table-inverse">
+                            <thead>
+                              <tr>
+                                <th></th>
+                                <th></th>
+                                <th>ID</th>
+                                <th>Navn</th>
+                                <th>Varenr</th>
+                                <th>Pris</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th> <a href="" id="retButton">Ret</a></th>
+                                <th> <button id="sletButton">Slet</button></th>
+                                <th scope="row">1</th>
+                                <td>classic_cd</td>
+                                <td>1234</td>
+                                <td>299.00</td>
+                              </tr>
+                              <tr>
+                                <th> <a href="" id="retButton">Ret</a></th>
+                                <th> <button id="sletButton">Slet</button></th>
+                                <th scope="row">2</th>
+                                <td>destiny_cd</td>
+                                <td>5678</td>
+                                <td>599.95</td>
+                              </tr>
+                              <tr>
+                                <th> <a href="" id="retButton">Ret</a></th>
+                                <th> <button id="sletButton">Slet</button></th>
+                                <th scope="row">3</th>
+                                <td>evo_cd</td>
+                                <td>9001</td>
+                                <td>200.00</td>
+                              </tr>
+                            </tbody>
+                          </table> -->
+                    </section>
+        
+                </section>
+        
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="./js/helpers.js"></script>
+<script src="./js/admin_02.js"></script>
+<script src="./login.html"></script>
+
+<!-- <script>
+    var equalColumns = function () {
+        // console.log("hej");
+        var columns = document.getElementsByClassName("celle");
+
+        // console.log(columns.length);
+        var length = columns.length;
+        var height = 0;
+
+        for (var i = 0; i < length; i++){
+            columns[i].style.height = "auto";
+        }
+
+        for (var i = 0; i < length; i++){
+            if (columns[i].clientHeight > height){
+                height = columns[i].clientHeight;
+                // console.log(height);
+            }
+        }
+
+        for (var i = 0; i < length; i++){
+            columns[i].style.height = height + "px";
+        }
+    }
+    equalColumns();
+    window.addEventListener("resize", equalColumns, true);
+    </script> -->
+</html>
