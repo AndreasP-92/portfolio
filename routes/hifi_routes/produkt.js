@@ -27,13 +27,13 @@ module.exports = function (app) {
             db.query('SELECT * FROM produkt WHERE fk_kategori = 3', function (err, data) {
                 res.send(data);
             })
-        })
-        db.end();
+            db.end();
+        }),
     app.get('/produkt_hojt', function (req, res) {
         db.query('SELECT * FROM produkt WHERE fk_kategori = 2', function (err, data) {
             res.send(data);
         })
-        db.end();
+        // db.end();
     });
     // Index
 
