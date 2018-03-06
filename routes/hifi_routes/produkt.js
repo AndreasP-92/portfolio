@@ -20,7 +20,7 @@ module.exports = function (app) {
             } else {
                 res.json(200, rows);
             }
-            db.end();
+            // db.end();
         })
     }),
         app.get('/produkt_fors', function (req, res) {
