@@ -20,12 +20,14 @@ module.exports = function (app) {
         db.query('select * from kategori where id = ?', req.params.id, function (err, data) {
             res.send(data);
         })
+        db.end();
     });
 
     app.get('/producenter', function (req, res) {
         db.query('select * from producent', function (err, data) {
             res.send(data);
         })
+        db.end();
     });
 
     app.get('/produkter/kategori/:id', function (req, res) {
@@ -33,17 +35,7 @@ module.exports = function (app) {
         db.query('select * from produkter where fk_kategori = ?', req.params.id, function (err, data) {
             res.send(data);
         })
-        // db.query(`
-        //     select *
-        //     from produkter
-        //     inner join kategorier on kategorier.id = produkter.fk_kategori
-        //     where fk_kategori = ?
-        // `, req.params.id, function (err, data) {
-        //     res.send(data);
-        // })
-
-
-
+        db.end();
     });
 
     app.get('/produkter/:id', function (req, res) {
@@ -52,6 +44,7 @@ module.exports = function (app) {
             res.send(data);
             console.log(data);
         })
+        db.end();
     });
 
     app.put('/produkter/:id', (req, res, next) => {
@@ -82,6 +75,7 @@ module.exports = function (app) {
                 message: 'validering fejlede'
             });
         }
+        db.end();
     });
 
     app.get('/produkter/search/:id', function (req, res) {
@@ -89,6 +83,7 @@ module.exports = function (app) {
         db.query(`select * from produkter where fk_navn like "%"?"%"`, req.params.id, function (err, data) {
             res.send(data);
         })
+        db.end();
     });
 
     app.post('/produkt', (req, res, next) => {
@@ -115,6 +110,7 @@ module.exports = function (app) {
                 })
             }
         })
+        db.end();
     });
 
     app.delete('/produkt/:id', (req, res, next) => {
@@ -133,5 +129,6 @@ module.exports = function (app) {
                 message: 'id ikke valid'
             });
         }
+        db.end();
     });
 }
