@@ -8,6 +8,9 @@ module.exports = {
             'password': '4321',
             'database': 'hifi'
         });
+        doMultipleQueries(function(err){
+            connect.end();
+        })
     }
 };
 
