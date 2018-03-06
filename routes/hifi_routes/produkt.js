@@ -41,7 +41,7 @@ module.exports = function (app) {
         db.query('SELECT * FROM produkt order by id desc limit 3', function (err, data) {
             res.send(data);
         })
-        db.end();
+        // db.end();
     })
 
     // SEARCH ENGINE
