@@ -4,7 +4,7 @@
 })();
 
 function udskriv_fra_kontakt(kontakt) {
-    fetch(host + ":" + port + '/kontakt')
+    fetch(host + port + '/kontakt')
         .then((response) => {
             return response.json();
         })

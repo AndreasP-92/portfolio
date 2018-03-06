@@ -5,7 +5,7 @@
 
     // UDSKRIVER BRUGERNE ******************************************'
     function udskriv_bruger(bruger) {
-        fetch(host + ":" + port + '/bruger')
+        fetch(host + port + '/bruger')
             .then((response) => {
                 return response.json();
             })

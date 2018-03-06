@@ -66,7 +66,7 @@
 
 // UDSKRIV ALT
 function udskriv_fra_search(searchquery) {
-    fetch(host + ":" + port + '/produkt_search/' + searchquery)
+    fetch(host + port + '/produkt_search/' + searchquery)
     // fetcher fra min host
         .then((response) => {
             return response.json();
@@ -90,7 +90,7 @@ function udskriv_fra_search(searchquery) {
 };
 // UDSKRIV FRA ID
 function udskriv_fra_id(searchquery) {
-    fetch(host + ":" + port + '/produkt/' + searchquery)
+    fetch(host + port + '/produkt/' + searchquery)
         .then((response) => {
             console.log(response + 'hej')
             return response.json();
@@ -113,7 +113,7 @@ function udskriv_fra_id(searchquery) {
 
 // UDSKRIV FRA KATEGORI
 function udskriv_fra_kategori(searchquery) {
-    fetch(host + ":" + port + '/produkt')
+    fetch(host + port + '/produkt')
         .then((response) => {
             return response.json();
         })
@@ -135,7 +135,7 @@ function udskriv_fra_kategori(searchquery) {
 
 // UDSKRIV ALT
 function udskriv_alle() {
-    fetch(host + ":" + port + '/produkt')
+    fetch(host + port + '/produkt')
         .then((response) => {
             return response.json();
         })
@@ -152,7 +152,7 @@ function udskriv_alle() {
         });
 
 // UDSKRIV FORSTÆRKER
-    fetch(host + ":" + port + '/produkt_fors')
+    fetch(host + port + '/produkt_fors')
         .then((response) => {
             return response.json();
         })
@@ -168,7 +168,7 @@ function udskriv_alle() {
             }, this);
         });
 // UDSKRIV HØJTALER
-    fetch(host + ":" + port + '/produkt_hojt')
+    fetch(host + port + '/produkt_hojt')
         .then((response) => {
             return response.json();
         })

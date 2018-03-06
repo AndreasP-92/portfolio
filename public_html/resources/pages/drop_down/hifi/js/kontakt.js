@@ -43,7 +43,7 @@ document.querySelector('#send').addEventListener('click', (event) => {
             
         };
         hide.style.display = 'none'
-        let request = new Request(host + ":" + port + '/kontakt_create', init);
+        let request = new Request(host + port + '/kontakt_create', init);
         
         fetch(request)
         .then(response => {
