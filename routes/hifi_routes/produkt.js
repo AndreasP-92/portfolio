@@ -20,8 +20,8 @@ module.exports = function (app) {
             } else {
                 res.json(200, rows);
             }
+            db.end();
         })
-        // db.end();
     }),
         app.get('/produkt_fors', function (req, res) {
             db.query('SELECT * FROM produkt WHERE fk_kategori = 3', function (err, data) {
