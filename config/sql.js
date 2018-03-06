@@ -14,13 +14,13 @@ module.exports = {
 
 // ********************************************************* TESTING ********************************************************
 
-/* module.exports = {
-    'connect': () => {
-        return mysql.createConnection({
-            'host': 'localhost',
-            'user': 'root',
-            'password': '',
-            'database': 'hifi'
-        });
-    }
-}; */
+// module.exports = {
+//     'connect': () => {
+//         return mysql.createConnection({
+//             'host': 'localhost',
+//             'user': 'root',
+//             'password': '',
+//             'database': 'hifi'
+//         });
+//     }
+// }; 
