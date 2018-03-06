@@ -58,7 +58,7 @@ function search_button() {
 
     // alert('HEJ FRA ALERT')
 
-    fetch(host + ':1337/produkt_search/' + input)
+    fetch(host + ":" + port + '/produkt_search/' + input)
     // her fetcher jeg fra min localhost
         .then((response) => {
             return response.json();

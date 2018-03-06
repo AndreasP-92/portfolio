@@ -8,7 +8,7 @@
                 'password': form.password.value
             });
 
-            fetch(host + ':1337/login', {
+            fetch(host + ":" + port + '/login', {
                 'method': 'POST',
                 'headers': {
                     'Accept': 'application/json',

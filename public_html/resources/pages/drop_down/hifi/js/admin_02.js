@@ -27,7 +27,7 @@ function sletItem(event) {
             },
             cache: 'no-cache'
         };
-        let request = new Request(host + `:1337/produkt/${id}`, init);
+        let request = new Request(host + ":" + port + `/produkt/${id}`, init);
 
         fetch(request)
             .then(response => {
@@ -45,7 +45,7 @@ function sletItem(event) {
 function hentProdukter() {
     // console.log('pølse')
     // alert(id);
-    var url = host+':1337/produkter';
+    var url = host + ":" + port + '/produkter';
 
     fetch(url)
         .then((response) => {
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", event => {
         window.location.assign('login.html');
     }
 
-    fetch(host + `:1337/kategorier`)
+    fetch(host + ":" + port + `/kategorier`)
         .then((response) => {
             if (response.ok) {
                 return response.json();
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", event => {
             }
         })
 
-    fetch(host + `:1337/producenter`)
+    fetch(host + ":" + port + `/producenter`)
         .then((response) => {
             if (response.ok) {
                 return response.json();
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", event => {
     if (getParameterByName('action') == "edit") {
         let id = (getParameterByName('id') != null ? getParameterByName('id') : 0);
 
-        fetch(host + `:1337/produkter/${id}`)
+        fetch(host + ":" + port + `/produkter/${id}`)
             .then((response) => {
                 if (response.ok) {
                     return response.json();
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", event => {
 
                     if (navn != '' && varenr != '' && beskrivelse != '' && !isNaN(pris) && kategori != '' && producent != '' && id > 0) {
                         document.querySelector('#udfyldningMangler').innerHTML = "";
-                        let url = host + `:1337/produkter/${id}`;
+                        let url = host + ":" + port + `/produkter/${id}`;
                         // let headers = new Headers();
                         // headers.append('Content-Type', 'application/json');
 
@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", event => {
                 mode: 'cors'
             };
 
-            let request = new Request(host + ':1337/produkt', init);
+            let request = new Request(host + ":" + port + `//produkt', init);
 
             fetch(request)
                 .then(response => { console.log(response) }).catch(err => { 

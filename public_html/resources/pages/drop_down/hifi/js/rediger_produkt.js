@@ -25,7 +25,7 @@ function sletItem(event) {
                   headers: headers,
                   cache: 'no-cache'
             };
-            let request = new Request( host +`:1337/produkt/${id}`, init);
+            let request = new Request( host + ":" + port +`/produkt/${id}`, init);
 
             fetch(request)
                   .then(response => {
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", event => {
       if (getParameterByName('action') == "edit") {
             let productId = (getParameterByName('id') != null ? getParameterByName('id') : 0);
 
-            fetch(host + `:1337/produkt/${productId}`)
+            fetch(host + port + `:/produkt/${productId}`)
                   .then((response) => {
                         if (response.ok) {
                               return response.json();
@@ -108,7 +108,6 @@ document.addEventListener("DOMContentLoaded", event => {
 
                               if (id != 0 && name != '' && description != '' && !isNaN(pris) && id > 0) {
                                     document.querySelector('#productsFormError').innerHTML = "";
-                                    //  let url = `http://159.89.11.194:1337/produkt`;
                                     let headers = new Headers();
                                     headers.append('Content-Type', 'application/json');
 
@@ -138,7 +137,7 @@ document.addEventListener("DOMContentLoaded", event => {
                                     //       cache: 'no-cache',
                                     //       cors: 'cors'
                                     //    };
-                                    let request = new Request(host+`:1337/admin/produkt/${id}`, init);
+                                    let request = new Request(host+ port + `:/admin/produkt/${id}`, init);
 
                                     fetch(request)
                                           .then(response => {
@@ -208,7 +207,7 @@ document.addEventListener("DOMContentLoaded", event => {
 
                   if (name != '' && description != '' && !isNaN(pris)) {
                         document.querySelector('#productsFormError').innerHTML = "";
-                        let url = host + `:1337/produkter`;
+                        let url = host + port + `:/produkter`;
                         let headers = new Headers();
                         headers.append('Content-Type', 'application/json');
 
@@ -250,7 +249,7 @@ document.addEventListener("DOMContentLoaded", event => {
       // HENT ALLE PRODUKTER FUNKTION
 
 
-      fetch(host+':1337/produkt')
+      fetch(host+ port +':/produkt')
             .then((response) => {
                   if (response.ok) {
                         return response.json();
