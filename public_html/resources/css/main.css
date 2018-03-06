@@ -17,6 +17,11 @@ header{
     background-repeat:no-repeat;
     background-size:100%;
 }
+header:after{
+    content:"";
+    clear: both;
+    display:block;
+}
 /* FØRSTE SIDE--------------------------------------- */
 #forside.hide{
     position: fixed;
@@ -281,29 +286,33 @@ main:after{
     margin: 10px;
     color:#4e5a5f;
 }
-#egenskaber .a1 li{
-    color: #4e5a5f;
-}
+
 /* SLUT */
 
 /* **************************************************** EGENSKABER ******************************************************* */
-#egenskaber:after{
+.egenskaber:after{
     content:"";
     display: table;
     clear: both;
 }
+.egenskaber_a{
+    padding-bottom:50px; 
+    padding-top:100px;
+    border-bottom: 1px solid #d6e1e5;
+}
 
 /* EGENSKABER > A1 ------------------------------------------- */
 
-#egenskaber .a1{
-    width:30%;
-    float:left;
-    border-bottom: 1px solid #d6e1e5;
-    padding-bottom: 50px;
+.egenskaber .a1 li{
+    color: #4e5a5f;
+}
+.egenskaber .a1{
+    width:33%;
+    float:right;
     margin: auto;
     height:400px;
 }
-#egenskaber .a1 img{
+.egenskaber .a1 img{
     width:60%;
     display: block;
     margin:auto;
@@ -315,42 +324,80 @@ main:after{
 .a1 h3{
     text-align: center;
     margin-top:15%;
-}
-/* EGENSKABER > DIV */
-#egenskaber div{
-    width:90%;
-    margin: auto;
-}
-#egenskaber #a2{
-    width:45%;
-    float:left;
-    /* padding-top: 50px; */
-    border-right: 1px solid #d6e1e5;
-    padding:50px 20px;
-}
-#egenskaber #a2 img{
-    width:75%;
-    margin: auto;
-    margin-bottom: 20px;
-    display:block;
+    font-size:30px;
 }
 
-#egenskaber #a3{
-    width:45%;
-    float:right;
-    padding: 50px 20px;
+/* EGENSKABER > A2 ------------------------------------------- */
+
+.egenskaber .a2 li{
+    color: #4e5a5f;
 }
-#egenskaber #a3 img{
-    width:87%;
+.egenskaber .a2{
+    width:33%;
+    float:right;
+    margin: auto;
+    height:400px;
+}
+.egenskaber .a2 img{
+    width:60%;
+    display: block;
+    margin:auto;
+}
+.a2 ul{
+    padding-left: 28%;
+    padding-top: 20px;
+}
+.a2 h3{
+    text-align: center;
+    margin-top:15%;
+    font-size:30px;
+}
+
+/* EGENSKABER > DIV ----------------------------------------- */
+
+.egenskaber div{
+    width:100%;
+    margin: auto;
+    float:left;
+    padding-top:50px;
+}
+.egenskaber .a3{
+    width:50%;
+    float:left;
+    padding:35px 20px;
+}
+.egenskaber .a3 img{
+    width:70%;
     margin: auto;
     margin-bottom: 20px;
     display:block;
+    border-radius:3px;
 }
-#a2 h3, #a3 h3{
-    padding-bottom:20px;
+
+.egenskaber .a4{
+    width:50%;
+    float:right;
+    padding: 35px 20px;
+}
+.egenskaber .a4 img{
+    width:80%;
+    margin: auto;
+    margin-bottom: 20px;
+    display:block;
+    border-radius: 3px;
+}
+.egenskab_h3{
+    /* padding-bottom:20px; */
     text-align: center;
+    margin-top:20px;
+    font-size:30px;
 }
-#egenskaber div li{
+.egenskaber div li{
+    color: #4e5a5f;
+}
+.a4 p, .a3 p{
+    width: 75%;
+    margin: auto;
     color: #4e5a5f;
 }
 
@@ -408,3 +455,113 @@ footer div:after{
     margin-top:50px;
     margin-right: 5px;
 }
+
+
+/* ********************************************************** RESPONSIVE ************************************************************** */
+
+
+@media only screen and (max-width:620px) {
+
+/* ******************************************************* NAVIGATION ********************************************************** */
+    nav{
+        /* width:30%; */
+        margin-top:45%;
+    }
+    #left_nav{
+        background-color:#333;
+        width:97%;
+        border-radius:10px;
+    }
+    #left_nav li{
+        width:100%;
+        float:left;
+        font-size:25px;
+    }
+    #left_nav li:hover ul{
+        width:93%;
+    }
+    #left_nav ul li{
+        /* width:97%; */
+    }
+
+    /* BURGER MENU ---------------------------------- */
+
+    nav{
+        position: absolute;
+        transition: 1s;
+        width:100%;
+        left:-110%;
+        z-index: 100; 
+    }
+    nav.show{
+        left:0;
+    }
+    nav a{
+        display:none;
+    }
+    nav ul li ul{
+        width:50%;
+    }
+    #burger{
+        margin-right: 2%;
+        font-size:30px;
+        background-color:#454545;
+        width:31px;
+        border-radius: 2px;
+        float:left;
+    }
+    #burger i{
+        color:white;
+        cursor: pointer;
+        margin-left: 2px;
+        border-radius:5px;
+    }
+    #burger i:hover{
+        transform:scale(1.2);
+    }
+
+/* *********************************************************** MAIN ******************************************************************** */
+
+    main{
+        width:100%;
+    }
+
+    /* index ----------------------------------------- */
+
+    #div_01 img, #div_03 img{
+        width:100%;
+        margin: auto;
+    }
+    #div_01 article, #div_03 article{
+        width:100%;
+        font-size: 20px;
+        padding-top: 15px;
+    }
+    #div_01 article p, #div_03 article p{
+        padding-left:20px;
+    }
+    #div_02 article{
+        width:100%;
+        font-size:20px;
+        padding-top:15px;
+    }
+    #div_02 img{
+        width:90%;
+        margin:auto;
+    }
+    #div_02 article p{
+        /* padding-left:20px; */
+    }
+
+
+    /* ******************************************************* FOOTER ******************************** */
+    #kontakt{
+        margin:auto;
+    }
+    #footer_div{
+        width:25%;
+    }
+    #copyright{
+        font-size:11px;
+    }
+  }

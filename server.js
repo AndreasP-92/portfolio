@@ -3,9 +3,10 @@ const   express     = require('express'),
         server      = express(),
         bodyParser  = require('body-parser');
 
-var url     = "http://localhost:",
-    port    = 1337,
-    name    = "Mrcaptain"
+// var url     = "http://localhost:",
+var url     = "http://138.197.186.159:"
+    port    = 80,
+    name    = "Portfolio"
 
     server.engine('html', require('ejs').renderFile);
     server.set('view engine', 'html');
@@ -28,5 +29,5 @@ var url     = "http://localhost:",
 
     
 server.listen(port,function(){
-    console.log('Magic happens at: ' + url + port, '\n' + 'server name : ' + name)
+    console.log('Enter the world at: ' + url + port, '\n' + 'server name : ' + name)
 })

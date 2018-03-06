@@ -11,6 +11,8 @@ module.exports = function (app) {
         db.query('select * from fk_kategori', function (err, data) {
             res.send(data);
         })
+        db.end();
+
     });
 
     app.get('/kategorier/:id', function (req, res) {

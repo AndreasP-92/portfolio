@@ -8,7 +8,7 @@ function search_button() {
 
     console.log(input)
 
-    window.location = (host + ':3000/produkt.html?input=' + input)
+    window.location = (SiteAdress + '/static/resources/pages/drop_down/hifi/produkt.html?input=' + input)
 
     // alert('HEJ FRA ALERT')
     // window.location.href = "file:///C:/Users/mrcaptain/Documents/Web-integrator-hoved/projekt_nummer_01_ptr/web/produkt.html";
