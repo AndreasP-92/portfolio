@@ -21,19 +21,19 @@ module.exports = function (app) {
                 res.json(200, rows);
             }
         })
-        // db.end();
+        db.end();
     }),
         app.get('/produkt_fors', function (req, res) {
             db.query('SELECT * FROM produkt WHERE fk_kategori = 3', function (err, data) {
                 res.send(data);
             })
-            // db.end();
-        }),
+            db.end();
+        })
     app.get('/produkt_hojt', function (req, res) {
         db.query('SELECT * FROM produkt WHERE fk_kategori = 2', function (err, data) {
             res.send(data);
         })
-        // db.end();
+        db.end();
     });
     // Index
 
@@ -41,7 +41,7 @@ module.exports = function (app) {
         db.query('SELECT * FROM produkt order by id desc limit 3', function (err, data) {
             res.send(data);
         })
-        // db.end();
+        db.end();
     })
 
     // SEARCH ENGINE
@@ -49,7 +49,7 @@ module.exports = function (app) {
     app.get('/produkt_ny', function (req, res) {
         db.query('SELECT * from produkt WHERE fk_kategori order by id')
         res.send(data);
-        // db.end();
+        db.end();
     });
     app.get('/produkt_search/:key', function (req, res) {
         db.query(`SELECT * from produkt where fk_navn like '%${req.params.key}%'`, function (err, rows, fields) {
@@ -60,7 +60,7 @@ module.exports = function (app) {
             // }
             res.end(JSON.stringify(rows));
         })
-        // db.end();
+        db.end();
     });
 
     // KONTAKT
@@ -78,7 +78,7 @@ module.exports = function (app) {
             // else
             //     callback(null, result)
         })
-        // db.end();
+        db.end();
     });
 
     // INDSÆTTELSES FORM
@@ -100,7 +100,7 @@ module.exports = function (app) {
             // else
             //     callback(null, result)
         })
-        // db.end();
+        db.end();
     });
     // PRODUKT UNDER SIDE
     // app.get('/produkt/:id', function (req, res) {
@@ -126,7 +126,7 @@ module.exports = function (app) {
                 message: 'id ikke valid'
             });
         }
-        // db.end();
+        db.end();
     });
     //    INSERT PRODUKT
 
@@ -147,7 +147,7 @@ module.exports = function (app) {
                     res.json(200, rows);
                 }
             })
-            // db.end();
+            db.end();
         // } else {
         //     res.json(400, {
         //         message: 'validering fejlede'
@@ -178,7 +178,7 @@ module.exports = function (app) {
                     res.json(200, rows);
                 }
             })
-            // db.end();
+            db.end();
         // } 
         // else {
         //     res.json(400, {
