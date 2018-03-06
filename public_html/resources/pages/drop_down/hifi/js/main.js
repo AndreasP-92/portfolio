@@ -1,7 +1,7 @@
 
 // NEWS
 
-fetch(host + '/produkt_news')
+fetch(host + port + '/produkt_news')
 // henter informationer fra localhost
 .then((response) => {
     return response.json();
