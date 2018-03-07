@@ -550,7 +550,8 @@ footer div:after{
         margin-right: 5%;
         margin-top:5%;
         font-size:30px;
-        background-color:#00000069;
+        /* background-color:#00000069; */
+        background-color:black;
         width:42px;
         border-radius: 2px;
         float:right;
