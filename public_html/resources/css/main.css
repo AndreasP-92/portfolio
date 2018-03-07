@@ -327,6 +327,19 @@ main:after{
     font-size:30px;
 }
 
+/* EGENSKABER A3 ---------------------------- */
+.egenskaber .a5{
+    width:33%;
+    float:right;
+    margin: auto;
+    height:400px;
+}
+.egenskaber .a5 img{
+    width:60%;
+    display: block;
+    margin:auto;
+}
+
 /* EGENSKABER > A2 ------------------------------------------- */
 
 .egenskaber .a2 li{
@@ -512,9 +525,6 @@ footer div:after{
     #left_nav li:hover ul{
         width:93%;
     }
-    #left_nav ul li{
-        /* width:97%; */
-    }
     #flag{
         display:none;
     }
@@ -593,7 +603,66 @@ footer div:after{
     #div_02 article p{
         /* padding-left:20px; */
     }
+    
+    /* EGENSKABER ------------------------------- */
 
+    .egenskaber_a{
+        padding-top:15px!important;
+        padding-bottom: 0px!important;
+    }
+
+    /* A1 */
+
+    .egenskaber_a .a1{
+        width:50%;
+        float:left;
+    }
+    /* A2 */
+    .egenskaber_a .a2{
+        width:50%;
+        float:left;
+    }
+    /* A5 */
+    .egenskaber_a .a5{
+        display:none;
+    }
+    /* A6 */
+    .a6{
+        width:100%;
+        padding-bottom: 30px;
+    }
+    .egenskaber .a6 img{
+        width:45%;
+        display: block;
+        margin:auto;
+
+    }
+    /* A3 */
+    .egenskab_h3{
+    }
+    .a3{
+        width:100%!important;
+    }
+    .a3 img{
+        width:100%!important;
+    }
+    .a3 p{
+        font-size:18px;
+        line-height:1.2;
+        width:100%;
+    }
+    /* A4 */
+    .a4{
+        width:100%!important;
+    }
+    .a4 img{
+        width:100%!important;
+    }
+    .a4 p{
+        font-size:18px;
+        line-height:1.2;
+        width:100%;
+    }
 
     /* ******************************************************* FOOTER ******************************** */
     #kontakt{
@@ -606,3 +675,14 @@ footer div:after{
         font-size:11px;
     }
   }
+@media only screen and (min-width:620px) {
+    #burger{
+        display:none;
+    }
+    .flag_rep{
+        display:none;
+    }
+    .a6{
+        display:none;
+    }
+}
