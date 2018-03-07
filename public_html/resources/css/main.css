@@ -474,6 +474,12 @@ footer div:after{
 
 
 @media only screen and (max-width:620px) {
+
+    /* HEADER --------------------------------- */
+    header{
+        border-bottom-right-radius:0px;
+        border-bottom-left-radius: 0px;
+    }
     
     /* FLAG ------------------------------------ */
     .flag_rep{
