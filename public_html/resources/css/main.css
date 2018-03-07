@@ -534,6 +534,9 @@ footer div:after{
     #flag{
         display:none;
     }
+    #h2_en{
+        font-size:45px;
+    }
     /* BURGER MENU ---------------------------------- */
 
     nav{
