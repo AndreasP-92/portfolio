@@ -45,7 +45,7 @@ function slideEffect() {
 // ************************************************* PHONE NUMBER *********************************************************
 function phone (){
     document.getElementById('phone').addEventListener('click',event=>{
-        alert('28 88 81 92')
+        alert('Telefon: 28 88 81 92')
     })
 }
 
