@@ -3,10 +3,10 @@ const   express     = require('express'),
         server      = express(),
         bodyParser  = require('body-parser');
 
-var url     = "http://localhost:",
-    port    = 1337,
-// var url     = "mrcaptain.info",
-    // port    = 80,
+// var url     = "http://localhost:",
+    // port    = 1337,
+var url     = "mrcaptain.info",
+    port    = 80,
     name    = "Portfolio"
 
     server.engine('html', require('ejs').renderFile);
