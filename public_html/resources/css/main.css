@@ -584,6 +584,9 @@ footer div:after{
         width:100%;
         border:0px solid grey;
     }
+    header > h2{
+        color:#1e1e1e;
+    }
 
     /* index ----------------------------------------- */
 

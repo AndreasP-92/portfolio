@@ -1,6 +1,6 @@
 (function () {
     // fadeOutEffect();
-    // slideEffect();
+    slideEffect();
     phone();
     burger();
 })()
