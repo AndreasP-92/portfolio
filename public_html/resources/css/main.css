@@ -476,10 +476,10 @@ footer div:after{
 @media only screen and (max-width:620px) {
 
     /* HEADER --------------------------------- */
-    header{
+    /* header{
         border-bottom-right-radius:0px;
         border-bottom-left-radius: 0px;
-    }
+    } */
     
     /* FLAG ------------------------------------ */
     .flag_rep{
@@ -582,6 +582,7 @@ footer div:after{
 
     main{
         width:100%;
+        border:0px solid grey;
     }
 
     /* index ----------------------------------------- */
