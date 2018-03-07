@@ -578,6 +578,27 @@ footer div:after{
         transform:scale(1.2);
     }
 
+    /* FADE AWAY ---------------------------- */
+    #forside{
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.94);
+    }
+    #forside article{
+        width:70%;
+    }
+    #forside article i{
+        left: 82%;
+        top: 1%;
+    }
+    #forside article img{
+        width:70%;
+    }
+    #forside article p{
+        font-size: 23px;
+        text-align: center;
+        margin-top: 39px;
+    }
+
 /* *********************************************************** MAIN ******************************************************************** */
 
     main{
@@ -587,6 +608,8 @@ footer div:after{
     header > h2{
         color:#1e1e1e;
     }
+
+    
 
     /* index ----------------------------------------- */
 
