@@ -5,7 +5,7 @@ const   express     = require('express'),
 
 // var url     = "http://localhost:",
 var url     = "mrcaptain.info",
-    port    = 8080,
+    port    = 80,
     name    = "Portfolio"
 
     server.engine('html', require('ejs').renderFile);
