@@ -40,6 +40,9 @@ function slideEffect() {
     document.getElementById("forside").addEventListener('click', fadeOutEffect => {
         var element = document.getElementById('forside')
         element.classList.toggle("hide")
+        var element_02 = document.querySelector('body')
+        element_02.classList.remove("stop_scroll")
+        console.log("slide igang")
     });
 };
 // ************************************************* PHONE NUMBER *********************************************************

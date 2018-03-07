@@ -8,6 +8,10 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
+.stop_scroll {
+    height: 100%;
+    overflow: hidden;
+  }
 
 /****************************************** HEADER ******************************************** */
 header{
