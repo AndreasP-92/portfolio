@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", event => {
       if (getParameterByName('action') == "edit") {
             let productId = (getParameterByName('id') != null ? getParameterByName('id') : 0);
 
-            fetch(host + port + `:/produkt/${productId}`)
+            fetch(host + port + `/produkt/${productId}`)
                   .then((response) => {
                         if (response.ok) {
                               return response.json();
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", event => {
                                     //       cache: 'no-cache',
                                     //       cors: 'cors'
                                     //    };
-                                    let request = new Request(host+ port + `:/admin/produkt/${id}`, init);
+                                    let request = new Request(host+ port + `/admin/produkt/${id}`, init);
 
                                     fetch(request)
                                           .then(response => {
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", event => {
 
                   if (name != '' && description != '' && !isNaN(pris)) {
                         document.querySelector('#productsFormError').innerHTML = "";
-                        let url = host + port + `:/produkter`;
+                        let url = host + port + `/produkter`;
                         let headers = new Headers();
                         headers.append('Content-Type', 'application/json');
 
@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", event => {
       // HENT ALLE PRODUKTER FUNKTION
 
 
-      fetch(host+ port +':/produkt')
+      fetch(host+ port +'/produkt')
             .then((response) => {
                   if (response.ok) {
                         return response.json();

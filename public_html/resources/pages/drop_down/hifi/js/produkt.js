@@ -42,7 +42,7 @@
 
 // UDSKRIV FRA KATEGORI
 function udskriv_fra_kategori(searchquery) {
-    fetch(host + ":" + port + '/produkt')
+    fetch(host + port + '/produkt')
         .then((response) => {
             return response.json();
         })
@@ -65,7 +65,7 @@ function udskriv_fra_kategori(searchquery) {
 
 // UDSKRIV ALLE
 function udskriv_alle() {
-    fetch(host + ":" + port + '/produkt')
+    fetch(host + port + '/produkt')
         .then((response) => {
             return response.json();
         })
@@ -87,7 +87,7 @@ function udskriv_alle() {
 
 // UDSKRIV FRA SEARCH
 function udskriv_fra_search(searchquery) {
-    fetch(host + ":" + port + '/produkt_search/' + searchquery)
+    fetch(host + port + '/produkt_search/' + searchquery)
         .then((response) => {
             return response.json();
         })
@@ -110,7 +110,7 @@ function udskriv_fra_search(searchquery) {
 
 // UDSKRIV FRA ID
 function udskriv_fra_id(searchquery) {
-    fetch(host + ":" + port + '/produkt/' + searchquery)
+    fetch(host + port + '/produkt/' + searchquery)
         .then((response) => {
             console.log(response + 'hej')
             return response.json();

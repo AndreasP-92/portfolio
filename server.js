@@ -3,9 +3,9 @@ const   express     = require('express'),
         server      = express(),
         bodyParser  = require('body-parser');
 
-// var url     = "http://localhost:",
-var url     = "http://138.197.186.159:"
-    port    = 80,
+var url     = "http://localhost:",
+// var url     = "http://138.197.186.159:",
+    port    = 8080,
     name    = "Portfolio"
 
     server.engine('html', require('ejs').renderFile);
