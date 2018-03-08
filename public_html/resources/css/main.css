@@ -604,6 +604,7 @@ footer div:after{
     #forside article i{
         left: 82%;
         top: 1%;
+        font-size:65px;
     }
     #forside article h1{
         font-size:55px;
