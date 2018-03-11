@@ -615,6 +615,21 @@ footer div:after{
         z-index: 1;
         background-color: rgba(0, 0, 0, 0.94);
     }
+    #forside_border {
+        height: 36px;
+        width: 109%;
+        top: 9%;
+        left: 10%;
+        background-color: yellow;
+        position: absolute;
+        transform: rotate(26deg);
+        z-index: 3;
+    }
+    #forside_border #warning{
+        font-size:26px;
+    }
+
+
     #forside article{
         width:70%;
     }
@@ -645,7 +660,7 @@ footer div:after{
         color:#1e1e1e;
     }
 
-    
+
 
     /* index ----------------------------------------- */
 
@@ -669,9 +684,6 @@ footer div:after{
     #div_02 img{
         width:90%;
         margin:auto;
-    }
-    #div_02 article p{
-        /* padding-left:20px; */
     }
     
     /* EGENSKABER ------------------------------- */
@@ -708,8 +720,6 @@ footer div:after{
 
     }
     /* A3 */
-    .egenskab_h3{
-    }
     .a3{
         width:100%!important;
     }
