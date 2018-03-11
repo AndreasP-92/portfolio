@@ -43,6 +43,22 @@ header:after{
     z-index:0;
 
 }
+#forside_border{
+    height:60px;
+    width:100%;
+    top:20%;
+    left:10%;
+    background-color:yellow;
+    position: absolute;
+    transform:rotate(20deg);
+    z-index:3;
+    
+}
+#warning{
+    font-size:50px;
+    text-align: center;
+    font-family:Impact, Charcoal, sans-serif;
+}
 #forside article i{
     font-size:80px;
     color:#619ae4;
@@ -64,6 +80,7 @@ header:after{
     width:50%;
     display: block;
     margin:0 auto;
+
 }
 h1{
     text-align: center;
