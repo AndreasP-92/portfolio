@@ -617,9 +617,9 @@ footer div:after{
     }
     #forside_border {
         height: 36px;
-        width: 109%;
-        top: 9%;
-        left: 10%;
+        width: 133%;
+        top: 15%;
+        left: -12%;
         background-color: yellow;
         position: absolute;
         transform: rotate(26deg);
