@@ -12,22 +12,20 @@ Brugerobservation
 Siden skal være nem og overflødig. Navigationen skal vise emner med de forskellige emner jeg har haft i løbet af årene, med under emner hvor selve opgaverne skal ligge.
 
 ## Målhierarkiet
-•	Få flotte opgaver ind på Portfolio’et
-•	Få Portfolio’et til at se flot ud
-•	Få Portfolio’et til at se overskueligt ud
-•	Skal være på flere sprog
-•	Få lavet en database inklusiv ER diagram
-•	Find en smart måde at uploade gamle samt nye projekter så de er funktionelle
-•	Flere mål kan blive tilføjet
+-	Få flotte opgaver ind på Portfolio’et
+-	Få Portfolio’et til at se flot ud
+-	Få Portfolio’et til at se overskueligt ud
+-	Skal være på flere sprog
+-	Få lavet en database inklusiv ER diagram
+-	Find en smart måde at uploade gamle samt nye projekter så de er funktionelle
+-	Flere mål kan blive tilføjet
 ## Faneblad
-•	Forside/Home
-•	Ting jeg har opnået
-•	Egenskaber/My expertise
-- kode
-- 
-•	Projekter/Projects
-- DropDown
-•	Kontakt/Contact
+-	Forside/Home
+-	Egenskaber/skills
+-	Projekter/Projects
+    * Drop Down
+-   Kontakt/Contact
+
 ## Nyttige links
 
 [How to build a good portfolio](https://www.webdesignerdepot.com/2011/08/characteristics-of-a-modern-portfolio-site/)
