@@ -501,6 +501,40 @@ footer div:after{
     margin-right: 5px;
 }
 
+/* ************************************************************* PROJECTS ************************************************************ */
+
+.project_div{
+        padding-bottom:50px; 
+        /* padding-top:60px; */
+        border-bottom: 1px solid #d6e1e5;
+        width:100%;
+}
+.project_div:after{
+    display:block;
+    content:"";
+    clear:both;
+}
+.project_div article{
+    width:30%;
+    margin:7px;
+    float:left;
+}
+.project_div article img{
+    width:100%;
+    border-radius:3px
+}
+.project_div article h3{
+    text-align: center;
+    margin-bottom: 35px;
+}
+.project_div article p{
+    margin-top:20px;
+}
+.project_div img:hover{
+    transform:scale(1.02);
+    transition:2s;
+}
+
 
 /* ********************************************************** RESPONSIVE ************************************************************** */
 
@@ -562,6 +596,9 @@ footer div:after{
     }
     #left_nav li:hover ul{
         width:93%;
+    }
+    #dropDown{
+        display:none;
     }
     #flag{
         display:none;
@@ -626,7 +663,7 @@ footer div:after{
         z-index: 3;
     }
     #forside_border #warning{
-        font-size:26px;
+        font-size:28px;
     }
 
 
@@ -742,6 +779,26 @@ footer div:after{
         font-size:18px;
         line-height:1.2;
         width:100%;
+    }
+
+    /* ******************************************************** PROJECTS ************************************************************* */
+
+    .projects{
+        width:100%;
+    }
+    .project_div{
+        width:100%;
+        border:none;
+    }
+    .project_div article{
+        width:100%;
+        margin-bottom:60px;
+    }
+    .project_div h3{
+        font-size:30px;
+    }
+    .project_div p{
+        font-size:20px;
     }
 
     /* ******************************************************* FOOTER ******************************** */

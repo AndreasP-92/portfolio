@@ -7,7 +7,7 @@ module.exports = function (server){
     );
     server.get('/forside',
     function(req,res){
-        console.log('egenskaber læst')
+        console.log('forside læst')
             res.render('pages/forside')
         }
     );
@@ -15,6 +15,18 @@ module.exports = function (server){
     function(req,res){
         console.log('egenskaber læst')
             res.render('pages/egenskaber')
+        }
+    );
+    server.get('/kontakt',
+    function(req,res){
+        console.log('projekter læst')
+            res.render('pages/kontakt')
+        }
+    );
+    server.get('/projekter',
+    function(req,res){
+        console.log('projekter læst')
+            res.render('pages/projekter')
         }
     );
 }
