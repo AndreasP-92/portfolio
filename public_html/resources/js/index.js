@@ -8,8 +8,8 @@
 //************************************************* FADEOUT EFFEKT *********************************************************
 
 function fadeOutEffect() {
-    document.getElementById("forside").addEventListener('click', fadeOutEffect => {
-        var fadeTarget = document.getElementById("forside");
+    document.getElementById("frontPage").addEventListener('click', fadeOutEffect => {
+        var fadeTarget = document.getElementById("frontPage");
         var fadeEffect = setInterval(function () {
             if (!fadeTarget.style.opacity) {
                 fadeTarget.style.opacity = 1;
@@ -37,8 +37,8 @@ function burger (){
 //************************************************* SLIDE EFFEKT *********************************************************
 
 function slideEffect() {
-    document.getElementById("forside").addEventListener('click', fadeOutEffect => {
-        var element = document.getElementById('forside')
+    document.getElementById("frontPage").addEventListener('click', fadeOutEffect => {
+        var element = document.getElementById('frontPage')
         element.classList.toggle("hide")
         var scrollStop = document.querySelector('body')
         scrollStop.classList.remove("stop_scroll")

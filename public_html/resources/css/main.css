@@ -7,7 +7,7 @@ body{
     background-color:#eeeeee;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    background: radial-gradient(#eae9e9, #999999, #423f3f)
+    /* background: radial-gradient(#eae9e9, #999999, #423f3f) */
 }
 .stop_scroll {
     height: 100%;
@@ -28,14 +28,14 @@ header:after{
     display:block;
 }
 /* FØRSTE SIDE--------------------------------------- */
-#forside.hide{
+#frontPage.hide{
     position: fixed;
     transition: 1s;
     right:-110%;
     z-index: 100; 
     transition:2s;
 }
-#forside{
+#frontPage{
     right:0;
     background-color:rgba(0, 0, 0,0.95);
     width:100%;
@@ -45,7 +45,7 @@ header:after{
 
 
 }
-#forside_border{
+#frontPage_border{
     height:60px;
     width:100%;
     top:20%;
@@ -61,7 +61,7 @@ header:after{
     text-align: center;
     font-family:Impact, Charcoal, sans-serif;
 }
-#forside article i{
+#frontPage article i{
     font-size:80px;
     color:#619ae4;
     top:5%;
@@ -69,16 +69,16 @@ header:after{
     right:30%;
     cursor: pointer;
 }
-#forside article i:hover{
+#frontPage article i:hover{
     transform:rotate(45deg);
 }
-#forside article{
+#frontPage article{
     width:30%;
     color:white;
     margin:0 auto;
     
 }
-#forside article img{
+#frontPage article img{
     border-radius:300px;
     width:50%;
     display: block;
@@ -93,7 +93,7 @@ h1{
     padding-bottom: 5%;
     font-size:65px;
 }
-#forside article p{
+#frontPage article p{
     color:#929292;
     text-align: center;
     margin-top:10px;
@@ -135,24 +135,30 @@ nav ul:after{
     display: table;
     clear: both;
 }
+#left_nav{
+    margin-left:55px;
+}
 #left_nav li{
     float: left;
-    width:20%;
+    width:21%;
     text-align: center;
 }
 nav #left_nav > li:hover{
     border:2px solid white;
-    border-radius:10px;
+    border-radius:18px;
 }
 nav ul li a{
     text-decoration: none;
     color:#ccc;
     width:100%;
     display:block;
+    margin-top: 5px;
+    height:25px;
 
 }
 
 /* Under Menu --------------------------------------- */
+
 #left_nav ul li{
     float:none;
     list-style-type:none
@@ -188,6 +194,7 @@ nav ul li a{
 #left_nav li ul li a{
     float:left;
     width:100%;
+    height:15px;
 }
 
 #left_nav ul{
@@ -247,91 +254,96 @@ main{
     margin:0px auto;
     /* border:1px solid grey;    */
     padding:5px;
+    width:90%;
 }
 main:after{
     content:"";
     display: table;
     clear: both;
 }
-/* INDEX ------------------------------------- */
 
+/* ********************************************************** INDEX/FRONT PAGE ***************************************************  */
 
-/* div 1 + 3 */
+/* Index div 1 + 3 ---------------------------------*/
 main div{
     width:100%;
 }
-.forside_div_01{
-    /* width:100%; */
-    margin:auto;
+.frontPage_div_01{
     padding-top: 25px;
     padding-bottom: 50px;
 }
-.forside_div_01 div{
+.frontPage_div_01 div{
     float:left;
     width:45%;
+
+
 }
-.forside_div_01:after{
+.frontPage_div_01:after{
     content:"";
     display: table;
     clear:both;
 }
-.forside_div_01 h3{
+.frontPage_div_01 h3{
     text-align: center;
     margin-bottom: 40px;
     font-size:30px;
+    color:#454545;
 }
-.forside_div_01 div img{
+.frontPage_div_01 div img{
     width:48%;
     border-radius: 3px;
     float:right;
 }
-.forside_div_01 article{
+.frontPage_div_01 article{
     float: right;
     width:45%;
     margin-left:72px;
 
 }
-.forside_div_01 article p{
+.frontPage_div_01 article p{
     margin:10px;
     color:#4e5a5f;
     width:50%;
     font-size:18px;
 }
-/* div 2 */
-.forside_div_02{
+/* frontPage div 2 ------------------------- */
+
+.frontPage_div_02{
     /* width:80%; */
     margin:auto;
     padding-top:25px;
-    padding-bottom:50px;
+    padding-bottom:12px;
     border-top: 1px solid #d6e1e5;
     border-bottom: 1px solid #d6e1e5;
-    background-color: #e6e3e3;
+    background-color:#d4d4d4;
+        /* background: radial-gradient(#eae9e9, #999999, #423f3f); */
     /* background-color:; */
 }
-.forside_div_02:after{
+.frontPage_div_02:after{
     content:"";
     display: table;
     clear:both;
 }
-.forside_div_02 > div{
+.frontPage_div_02 > div{
     float:right;
     width:45%;
 }
-.forside_div_02 h3{
+.frontPage_div_02 h3{
     text-align: center;
     font-size:30px;
     margin-bottom: 40px;
+    color: #454545;
 }
-.forside_div_02 img{
+.frontPage_div_02 img{
     width:40%;
     float:left;
 }
-.forside_div_02 article{
+.frontPage_div_02 article{
     float: left;
     width:45%;
     margin-left:20px;
 }
-.forside_div_02 article p{
+.frontPage_div_02 article p{
     margin: 10px;
     color:#4e5a5f;
     float:right;
@@ -341,110 +353,119 @@ main div{
 
 /* SLUT */
 
-/* **************************************************** EGENSKABER ******************************************************* */
-.egenskaber:after{
+/* **************************************************** skills ******************************************************* */
+.skills{
+    width:80%;
+}
+.skills:after{
     content:"";
     display: table;
     clear: both;
 }
-.egenskaber_a{
+.skills_a{
     padding-bottom:50px; 
     padding-top:100px;
     border-bottom: 1px solid #d6e1e5;
 }
-
-/* EGENSKABER > A1 ------------------------------------------- */
-
-.egenskaber .a1 li{
-    color: #4e5a5f;
+.skills_a:after{
+    content:"";
+    clear:both;
+    display:table;
 }
-.egenskaber .a1{
+
+/* skills > A1 ------------------------------------------- */
+
+.skills_a1 li{
+    color: #4e5a5f;
+    font-size: 18px;
+}
+.skills_a1{
     width:33%;
     float:right;
     margin: auto;
     height:400px;
 }
-.egenskaber .a1 img{
+.skills_a1 img{
     width:60%;
     display: block;
     margin:auto;
 }
-.a1 ul{
-    padding-left: 30px;
+.skills_a1 ul{
+    padding-left: 82px;
     padding-top: 20px;
 }
-.a1 h3{
+.skills_a1 h3{
     text-align: center;
     margin-top:15%;
     font-size:30px;
 }
 
-/* EGENSKABER A3 ---------------------------- */
-.egenskaber .a5{
+/* skills A3 ---------------------------- */
+.skills_a5{
     width:33%;
     float:right;
     margin: auto;
     height:400px;
 }
-.egenskaber .a5 img{
+.skills_a5 img{
     width:60%;
     display: block;
     margin:auto;
 }
 
-/* EGENSKABER > A2 ------------------------------------------- */
+/* skills > A2 ------------------------------------------- */
 
-.egenskaber .a2 li{
+.skills_a2 li{
     color: #4e5a5f;
+    font-size: 18px;
 }
-.egenskaber .a2{
+.skills_a2{
     width:33%;
     float:right;
     margin: auto;
     height:400px;
 }
-.egenskaber .a2 img{
+.skills_a2 img{
     width:60%;
     display: block;
     margin:auto;
 }
-.a2 ul{
+.skills_a2 ul{
     padding-left: 28%;
     padding-top: 20px;
 }
-.a2 h3{
+.skills_a2 h3{
     text-align: center;
     margin-top:15%;
     font-size:30px;
 }
 
-/* EGENSKABER > DIV ----------------------------------------- */
+/* skills > DIV ----------------------------------------- */
 
-.egenskaber div{
+.skills_skills div{
     width:100%;
     margin: auto;
     float:left;
     padding-top:50px;
 }
-.egenskaber .a3{
+.skills_a3{
     width:50%;
     float:left;
     padding:35px 20px;
 }
-.egenskaber .a3 img{
-    width:70%;
+.skills_a3 img{
+    width:63%;
     margin: auto;
     margin-bottom: 20px;
     display:block;
     border-radius:3px;
 }
-
-.egenskaber .a4{
-    width:50%;
+.skills_a4{
+    width:45%;
     float:right;
     padding: 35px 20px;
 }
-.egenskaber .a4 img{
+.skills_a4 img{
     width:80%;
     margin: auto;
     margin-bottom: 20px;
@@ -457,20 +478,27 @@ main div{
     margin-top:20px;
     font-size:30px;
 }
-.egenskaber div li{
+.skills_skills div li{
     color: #4e5a5f;
 }
-.a4 p, .a3 p{
-    width: 75%;
+.skills_a3 p{
+    width: 60%;
     margin: auto;
     color: #4e5a5f;
+    font-size: 18px;
+}
+.skills_a4 p{
+    width: 80%;
+    margin: auto;
+    color: #4e5a5f;
+    font-size: 18px;
 }
 
 /* ************************************************** FOOTER ***************************************************** */
 
 footer{
     width:100%;
-    background-color:#252a30;
+    background-color:#000000c2;
     color:rgba(255,255,255,0.4);
     /* height:125px; */
 }
@@ -522,7 +550,10 @@ footer div:after{
 }
 
 /* ************************************************************* PROJECTS ************************************************************ */
-
+.projects{
+    width:70%;
+    margin:auto;
+}
 .project_div{
         padding-bottom:50px; 
         /* padding-top:60px; */
@@ -578,11 +609,15 @@ footer div:after{
         display:table;
         clear: both;
     }
+    .flag_rep:after li:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
     .flag_rep li a{
         float:right;
         width:38%;
         margin-left:1px;
-        /* float:right; */
     }
     .flag_rep li a:after{
         content:"";
@@ -599,15 +634,25 @@ footer div:after{
         border:2px solid white;
         border-radius:2px;
     }
+    
+    /* FLAG NOT RESP ------------------------------------------- */
+    
+    #flag{
+        display:none;
+    }
 /* ******************************************************* NAVIGATION ********************************************************** */
+    header{
+        height: 248px;
+    }
     nav{
         /* width:30%; */
         margin-top:23%;
     }
     #left_nav{
-        background-color:#333;
-        width:97%;
-        border-radius:10px;
+        background-color: #333;
+        width: 90%;
+        border-radius: 10px;
+        margin-left:8px;    
     }
     #left_nav li{
         width:100%;
@@ -620,9 +665,7 @@ footer div:after{
     #dropDown{
         display:none;
     }
-    #flag{
-        display:none;
-    }
+
     #h2_en{
         font-size:45px;
     }
@@ -668,11 +711,11 @@ footer div:after{
     }
 
     /* FADE AWAY ---------------------------- */
-    #forside{
+    #frontPage{
         z-index: 1;
         background-color: rgba(0, 0, 0, 0.94);
     }
-    #forside_border {
+    #frontPage_border {
         height: 36px;
         width: 133%;
         top: 15%;
@@ -682,26 +725,26 @@ footer div:after{
         transform: rotate(26deg);
         z-index: 3;
     }
-    #forside_border #warning{
+    #frontPage_border #warning{
         font-size:28px;
     }
 
 
-    #forside article{
+    #frontPage article{
         width:70%;
     }
-    #forside article i{
+    #frontPage article i{
         left: 82%;
         top: 1%;
         font-size:65px;
     }
-    #forside article h1{
+    #frontPage article h1{
         font-size:55px;
     }
-    #forside article img{
+    #frontPage article img{
         width:63%;
     }
-    #forside article p{
+    #frontPage article p{
         font-size: 23px;
         text-align: center;
         margin-top: 24px;
@@ -712,6 +755,7 @@ footer div:after{
     main{
         width:100%;
         border:0px solid grey;
+        padding:0px;
     }
     header > h2{
         color:#1e1e1e;
@@ -719,83 +763,112 @@ footer div:after{
 
 
 
-    /* index ----------------------------------------- */
+    /* ***************************************************** index ****************************************************************** */
 
-    #div_01 img, #div_03 img{
+    .frontPage_div_01 div{
         width:100%;
-        margin: auto;
+ 
     }
-    .forside_div_01 article{
-        width:100%;
+    .frontPage_div_01 h3{
+        padding-top:15px;
+    }
+    .frontPage_div_01 img{
+        width:95%!important;
+        margin: 0px auto;
+        display:block;
+        float:none!important;
+    }
+    .frontPage_div_01 article{
+        width:98%;
         font-size: 20px;
         padding-top: 15px;
     }
-    .forside_div_01 article p{
-        padding-left:20px;
+    .frontPage_div_01 article p{
+        margin:0px;
+        width:100%;
     }
-    .forside_div_02 article{
+    .frontPage_div_02{
+        background-color:#eeeeee;
+        margin-bottom:38px;
+    }
+    .frontPage_div_02 article{
         width:100%;
         font-size:20px;
         padding-top:15px;
     }
-    .forside_div_02 img{
-        width:90%;
+    .frontPage_div_02 article p{
+        margin:0px;
+        width:100%;
+    }
+    .frontPage_div_02 div{
+        width:100%;
+    }
+    .frontPage_div_02 img{
+        width:82%;
         margin:auto;
+        float:none!important;
+        display:block;
     }
     
-    /* EGENSKABER ------------------------------- */
+    /* skills ------------------------------- */
 
-    .egenskaber_a{
+    .skills_a{
         padding-top:15px!important;
         padding-bottom: 0px!important;
     }
 
     /* A1 */
 
-    .egenskaber_a .a1{
-        width:50%;
+    .skills_a1{
+        width:100%;
         float:left;
+        height:none;
     }
     /* A2 */
-    .egenskaber_a .a2{
-        width:50%;
+    .skills_a2{
+        width:100%;
         float:left;
+        height:none;
+    }
+    .skills_a2 h3{
+        /* margin-top:10px; */
     }
     /* A5 */
-    .egenskaber_a .a5{
+    .skills_a5{
         display:none;
     }
     /* A6 */
-    .a6{
+    .skills_a6{
         width:100%;
         padding-bottom: 30px;
+        padding-top:30px;
     }
-    .egenskaber .a6 img{
-        width:45%;
+    .skills_a6 img{
+        width:68%;
         display: block;
         margin:auto;
 
     }
     /* A3 */
-    .a3{
+    .skills_a3{
         width:100%!important;
     }
-    .a3 img{
+    .skills_a3 img{
         width:100%!important;
     }
-    .a3 p{
+    .skills_a3 p{
         font-size:18px;
         line-height:1.2;
         width:100%;
     }
     /* A4 */
-    .a4{
+    .skills_a4{
         width:100%!important;
     }
-    .a4 img{
+    .skills_a4 img{
         width:100%!important;
     }
-    .a4 p{
+    .skills_a4 p{
         font-size:18px;
         line-height:1.2;
         width:100%;
@@ -839,7 +912,7 @@ footer div:after{
     .flag_rep{
         display:none;
     }
-    .a6{
+    .skills_a6{
         display:none;
     }
 }
