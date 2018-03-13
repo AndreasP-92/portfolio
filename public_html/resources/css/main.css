@@ -586,6 +586,47 @@ footer div:after{
     transition:2s;
 }
 
+/* *********************************************************** CONTACT *************************************************************** */
+
+.contact{
+height:600px;
+
+}
+.contact > div{
+    width:100%;
+    padding-top:2%;
+    margin:20px;
+    /* height:300px; */
+}
+.contact_div:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+.contact_div01{
+    width:20%;
+    float:left;
+}
+.contact_div img{
+    width:88%;
+}
+.contact_div02{
+    width:75%;
+    float:left;
+}
+.contact_div h3{
+    margin-left:10px;
+    font-size:34px;
+    margin-bottom:5%;
+}
+.contact_div p{
+    margin-left:10px;
+    font-size:20px;
+    bottom:0px;
+}
+.content_div a{
+    text-decoration: none;
+}
 
 /* ********************************************************** RESPONSIVE ************************************************************** */
 
