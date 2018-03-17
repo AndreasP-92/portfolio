@@ -5,9 +5,15 @@
 }
 body{
     background-color:#eeeeee;
+    /* background-color:white; */
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+    margin:0.3%;
+    -webkit-box-shadow: 0px 0px 0px 13px #33485F;
+    -moz-box-shadow: 0px 0px 0px 13px #33485F;
+    box-shadow: 0px 0px 0px 13px #33485F;
     /* background: radial-gradient(#eae9e9, #999999, #423f3f) */
+    padding-top:20px;
 }
 .stop_scroll {
     height: 100%;
@@ -18,9 +24,11 @@ body{
 header{
     /* border-bottom-right-radius:10px;
     border-bottom-left-radius: 10px; */
-    background-image:url('../media/image/index/header_background.jpeg');
+    /* background-image:url('../media/image/index/header_background.jpeg'); */
     background-repeat:no-repeat;
     background-size:100%;
+    width:80%;
+    margin:auto;
 }
 header:after{
     content:"";
@@ -42,6 +50,7 @@ header:after{
     height:100%;
     position: fixed;
     z-index:0;
+    top:0px;
 
 
 }
@@ -89,8 +98,8 @@ h1{
     text-align: center;
     width:100%;
     color:#929292;
-    padding-top:17%;
-    padding-bottom: 5%;
+    padding-top:13%;
+    padding-bottom: 8%;
     font-size:65px;
 }
 #frontPage article p{
@@ -104,10 +113,10 @@ h2{
     text-align: center;
     width:100%;
     color:white;
-    padding-top:17%;
-    padding-bottom: 5%;
+    padding-top:13%;
+    padding-bottom: 8%;
     font-size:65px;
-    color:#454545;
+    color:#161d2d;
 }
 /* NAV START------------------------------------- */
 nav ul:after{
@@ -116,8 +125,11 @@ nav ul:after{
         clear:both;
 }
 nav{
-    height: 35px;
-    padding-top:40px;
+    height: 55px;
+    padding-top:15px;
+    -webkit-box-shadow: 0px 4px 5px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 5px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 5px 2px rgba(0,0,0,0.75);
 }
 nav:after{
     content:"";
@@ -129,14 +141,12 @@ nav ul{
     width:480px;
     margin:5px;
     list-style-type:none;
+
 }
 nav ul:after{
     content:"";
     display: table;
     clear: both;
-}
-#left_nav{
-    margin-left:55px;
 }
 #left_nav li{
     float: left;
@@ -144,12 +154,12 @@ nav ul:after{
     text-align: center;
 }
 nav #left_nav > li:hover{
-    border:2px solid white;
+    border-bottom:2px solid #F5C453;
     border-radius:18px;
 }
 nav ul li a{
     text-decoration: none;
-    color:#ccc;
+    color:#454545;
     width:100%;
     display:block;
     margin-top: 5px;
@@ -188,13 +198,14 @@ nav ul li a{
     opacity:1;
 }
 #left_nav li a:hover{
-	color: #ccc;
+	color: #454545;
 	text-decoration: none;
 }
 #left_nav li ul li a{
     float:left;
     width:100%;
     height:15px;
+    color:white;
 }
 
 #left_nav ul{
@@ -211,9 +222,10 @@ nav ul li a{
 #flag{
     /* float:right; */
     width:10%;
-    z-index:1;
+    z-index:3;
     position: absolute;
-    right:2%;
+    right:12%;
+    top: 33px;
 }
 #flag:after{
     content:"";
@@ -239,7 +251,7 @@ nav ul li a{
     width:100%
 }
 nav #flag a img:hover{
-    border:2px solid white;
+    border:2px solid #F5C453;
     border-radius:2px;
 }
 /* SLUT */
@@ -254,7 +266,8 @@ main{
     margin:0px auto;
     /* border:1px solid grey;    */
     padding:5px;
-    width:90%;
+    width:80%;
+    font-family: Slabo27px;
 }
 main:after{
     content:"";
@@ -265,18 +278,20 @@ main:after{
 /* ********************************************************** INDEX/FRONT PAGE ***************************************************  */
 
 /* Index div 1 + 3 ---------------------------------*/
-main div{
+.fontPage > img{
+    display:block;
+    margin:auto;
     width:100%;
 }
 .frontPage_div_01{
     padding-top: 25px;
     padding-bottom: 50px;
+    width:70%;
+    margin:auto;
 }
 .frontPage_div_01 div{
     float:left;
     width:45%;
-
-
 }
 .frontPage_div_01:after{
     content:"";
@@ -284,78 +299,65 @@ main div{
     clear:both;
 }
 .frontPage_div_01 h3{
-    text-align: center;
-    margin-bottom: 40px;
     font-size:30px;
-    color:#454545;
-}
-.frontPage_div_01 div img{
-    width:48%;
-    border-radius: 3px;
-    float:right;
+    color:#161d2d;
+    margin:10px;
 }
 .frontPage_div_01 article{
-    float: right;
-    width:45%;
-    margin-left:72px;
+    width:100%;
 
 }
 .frontPage_div_01 article p{
     margin:10px;
-    color:#4e5a5f;
-    width:50%;
-    font-size:18px;
+    color:#161d2d;
+    width:100%;
+    line-height:1.2;
+    font-size:20px;
 }
 /* frontPage div 2 ------------------------- */
 
 .frontPage_div_02{
-    /* width:80%; */
-    margin:auto;
-    padding-top:25px;
-    padding-bottom:12px;
-    border-top: 1px solid #d6e1e5;
-    border-bottom: 1px solid #d6e1e5;
-    background-color:#d4d4d4;
-        /* background: radial-gradient(#eae9e9, #999999, #423f3f); */
-    /* background-color:; */
+    width:100%;
+    border-top:1px solid grey;
+    padding-top:40px;
 }
-.frontPage_div_02:after{
-    content:"";
-    display: table;
-    clear:both;
+.frontPage_div_02 h4{
+    text-align: center;
+    font-weight:bold;
+    font-size: 3em;
+    color:#161d2d;
 }
 .frontPage_div_02 > div{
-    float:right;
-    width:45%;
+    margin:50px auto;
+    /* width:50%; */
+
+
+    /* height:38px; */
+    /* padding:auto; */
 }
-.frontPage_div_02 h3{
-    text-align: center;
-    font-size:30px;
-    margin-bottom: 40px;
-    color: #454545;
+.frontPage_div_02 div a{
+    width:150px;
+    margin: 0px auto;
+    display:block;
+    text-decoration: none;
+    color:#161d2d;
+    text-align:center;
+    border:2px solid #F5C453;
+    border-radius: 7px;
+    padding:20px;
+    color:#161d2d;
 }
-.frontPage_div_02 img{
-    width:40%;
-    float:left;
+.frontPage_div_02 div a:hover{
+    transform:scale(1.02);
 }
-.frontPage_div_02 article{
-    float: left;
-    width:45%;
-    margin-left:20px;
-}
-.frontPage_div_02 article p{
-    margin: 10px;
-    color:#4e5a5f;
-    float:right;
-    width:50%;
-    font-size:18px;
-}
+
 
 /* SLUT */
 
 /* **************************************************** skills ******************************************************* */
 .skills{
     width:80%;
+    border-top:1px solid grey;
 }
 .skills:after{
     content:"";
@@ -376,7 +378,7 @@ main div{
 /* skills > A1 ------------------------------------------- */
 
 .skills_a1 li{
-    color: #4e5a5f;
+    color: #161d2d;
     font-size: 18px;
 }
 .skills_a1{
@@ -398,6 +400,7 @@ main div{
     text-align: center;
     margin-top:15%;
     font-size:30px;
+    color:#161d2d;
 }
 
 /* skills A3 ---------------------------- */
@@ -416,7 +419,7 @@ main div{
 /* skills > A2 ------------------------------------------- */
 
 .skills_a2 li{
-    color: #4e5a5f;
+    color: #161d2d;
     font-size: 18px;
 }
 .skills_a2{
@@ -438,6 +441,7 @@ main div{
     text-align: center;
     margin-top:15%;
     font-size:30px;
+    color: #161d2d;
 }
 
 /* skills > DIV ----------------------------------------- */
@@ -472,25 +476,26 @@ main div{
     display:block;
     border-radius: 3px;
 }
-.egenskab_h3{
+.skills_h3{
     /* padding-bottom:20px; */
     text-align: center;
     margin-top:20px;
     font-size:30px;
+    color:#161d2d;
 }
 .skills_skills div li{
-    color: #4e5a5f;
+    color: #161d2d;
 }
 .skills_a3 p{
     width: 60%;
     margin: auto;
-    color: #4e5a5f;
+    color: #161d2d;
     font-size: 18px;
 }
 .skills_a4 p{
     width: 80%;
     margin: auto;
-    color: #4e5a5f;
+    color: #161d2d;
     font-size: 18px;
 }
 
@@ -498,45 +503,48 @@ main div{
 
 footer{
     width:100%;
-    background-color:#000000c2;
-    color:rgba(255,255,255,0.4);
+    background-color:#33485F;
     /* height:125px; */
+    color:#eeeeee;
 }
 footer:after{
     content:"";
     display: block;
     clear: both;
 }
-#footer_div{
-    margin:0 auto;
-    width:10%;
-}
-footer div:after{
+footer footer_div div:after{
     content:"";
     display: table;
     clear: both;
-
+}
+.footer_div{
+    margin:auto;
+    height:142px;
+    background-color:#2a3b4e;
+    width:80%;
+}
+.footer_div > div{
+    margin:0 auto;
+    width:10%;
 }
 .hyper-link{
     text-decoration:none;
     float:left;
 }
-.hyper-link i{
-    font-size:30px;
-    color:#ccc;
-    margin:3px;
-}
 .hyper-link i:hover{
-    transform:scale(1.2)
+    color:#F5C453;
 }
-#phone:hover{
-    transform:scale(1.2)
+.socialMedia:hover{
+    color:#F5C453;
 }
-#phone{
-    font-size:30px;
+.socialMedia{
+    font-size:36px;
     color:#ccc;
     margin:3px;
 }
+/* .socialMedia02{
+    font-size: 38px!important; */
+/* } */
 #kontakt{
     padding-top:20px;
     text-align: center;
@@ -545,7 +553,7 @@ footer div:after{
 }
 #copyright{
     float: right;
-    margin-top:50px;
+    margin-top:79px;
     margin-right: 5px;
 }
 
@@ -553,6 +561,7 @@ footer div:after{
 .projects{
     width:70%;
     margin:auto;
+    border-top:1px solid grey;
 }
 .project_div{
         padding-bottom:50px; 
@@ -577,19 +586,26 @@ footer div:after{
 .project_div article h3{
     text-align: center;
     margin-bottom: 35px;
+    color:#161d2d;
 }
 .project_div article p{
     margin-top:20px;
+    color:#161d2d;
+    line-height:1.3;
 }
 .project_div img:hover{
-    transform:scale(1.02);
-    transition:2s;
+    transform:scale(1.03);
+    transition:0.2s;
+}
+.bold{
+    font-weight:bold;
 }
 
 /* *********************************************************** CONTACT *************************************************************** */
 
 .contact{
-height:600px;
+    border-top:1px solid grey;
+    height:600px;
 
 }
 .contact > div{
@@ -618,32 +634,41 @@ height:600px;
     margin-left:10px;
     font-size:34px;
     margin-bottom:5%;
+    color:#161d2d; 
 }
 .contact_div p{
     margin-left:10px;
     font-size:20px;
     bottom:0px;
+    color:#161d2d;    
 }
-.content_div a{
-    text-decoration: none;
+.contact_div a{
+    /* text-decoration: none; */
+    color:#F5C453;
+    font-weight: bold;
+    /* list-style-type:none;     */
 }
 
 /* ********************************************************** RESPONSIVE ************************************************************** */
 
 
 @media only screen and (max-width:620px) {
-
+    /* BODY ---------------------------------- */
+    body{
+        width:97%;
+        margin:auto;
+    }
     /* HEADER --------------------------------- */
-    /* header{
-        border-bottom-right-radius:0px;
-        border-bottom-left-radius: 0px;
-    } */
+    header h2{
+        font-size:55px;
+    }
     
     /* FLAG ------------------------------------ */
     .flag_rep{
         float:left;
         width:39%;
         list-style-type: none;
+        margin-left:-13px
     }
     .flag_rep:after{
         content:"";
@@ -693,7 +718,7 @@ height:600px;
         background-color: #333;
         width: 90%;
         border-radius: 10px;
-        margin-left:8px;    
+        margin-left:8px;  
     }
     #left_nav li{
         width:100%;
@@ -705,6 +730,9 @@ height:600px;
     }
     #dropDown{
         display:none;
+    }
+    nav ul li a{
+        color:white;
     }
 
     #h2_en{
@@ -718,6 +746,7 @@ height:600px;
         width:100%;
         left:-110%;
         z-index: 100; 
+        box-shadow:none;
     }
     nav.show{
         left:0;
@@ -733,19 +762,18 @@ height:600px;
         margin-top:5%;
         font-size:30px;
         /* background-color:#00000069; */
-        background-color:rgba(0, 0, 0, 0.56);
+        background-color:#2a3b4e;
         width:42px;
         border-radius: 2px;
         float:right;
         position: fixed;
         right:0;
     }
-    #burger i{
-        color:white;
+    #burger svg, #burger i{
+        color:white!important;
         cursor: pointer;
         margin-left: 7px;
         border-radius:5px;
-
     }
     #burger i:hover{
         transform:scale(1.2);
@@ -805,57 +833,44 @@ height:600px;
 
 
     /* ***************************************************** index ****************************************************************** */
-
+    .fontPage img{
+        width:90%;
+        margin-bottom:20px;
+    }
+    .frontPage_div_01{
+        width:93%;
+        padding-bottom:15px;
+    }
     .frontPage_div_01 div{
         width:100%;
  
     }
-    .frontPage_div_01 h3{
-        padding-top:15px;
+    .frontPage_div_01 h3:nth-of-type(1){
+        /* padding-top:50px; */
     }
-    .frontPage_div_01 img{
-        width:95%!important;
-        margin: 0px auto;
-        display:block;
-        float:none!important;
+    .frontPage_div_01 h3{
+        padding-top:30px;
     }
     .frontPage_div_01 article{
-        width:98%;
+        width:100%;
         font-size: 20px;
         padding-top: 15px;
-    }
-    .frontPage_div_01 article p{
-        margin:0px;
-        width:100%;
+        margin-bottom:15px;
     }
     .frontPage_div_02{
-        background-color:#eeeeee;
-        margin-bottom:38px;
+        margin-top:55px;
     }
-    .frontPage_div_02 article{
-        width:100%;
-        font-size:20px;
-        padding-top:15px;
-    }
-    .frontPage_div_02 article p{
-        margin:0px;
-        width:100%;
-    }
-    .frontPage_div_02 div{
-        width:100%;
-    }
-    .frontPage_div_02 img{
-        width:82%;
-        margin:auto;
-        float:none!important;
-        display:block;
+    .frontPage_div_02 h4{
+        font-size:32px;
     }
     
     /* skills ------------------------------- */
 
-    .skills_a{
-        padding-top:15px!important;
-        padding-bottom: 0px!important;
+    .skills{
+        /* padding-top:15px!important; */
+        /* padding-bottom: 0px!important; */
+        padding-top:10px;
+        width:100%;
     }
 
     /* A1 */
@@ -870,9 +885,6 @@ height:600px;
         width:100%;
         float:left;
         height:none;
-    }
-    .skills_a2 h3{
-        /* margin-top:10px; */
     }
     /* A5 */
     .skills_a5{
@@ -898,8 +910,8 @@ height:600px;
         width:100%!important;
     }
     .skills_a3 p{
-        font-size:18px;
-        line-height:1.2;
+        font-size:20px;
+        line-height:1.3;
         width:100%;
     }
     /* A4 */
@@ -910,15 +922,16 @@ height:600px;
         width:100%!important;
     }
     .skills_a4 p{
-        font-size:18px;
-        line-height:1.2;
+        font-size:20px;
+        line-height:1.3;
         width:100%;
     }
 
     /* ******************************************************** PROJECTS ************************************************************* */
 
     .projects{
-        width:100%;
+        width:92%;
+        padding-top:10px;
     }
     .project_div{
         width:100%;
@@ -926,21 +939,55 @@ height:600px;
     }
     .project_div article{
         width:100%;
-        margin-bottom:60px;
+        /* margin-bottom:60px!important; */
+        margin:40px 0px;
     }
     .project_div h3{
         font-size:30px;
     }
     .project_div p{
         font-size:20px;
+        line-height:1.3;
+    }
+    .project_div img{
+        width:100%!important;
+        display:block;
+        margin:auto;
+    }
+    /* ******************************************************** CONTACT ********************************** */
+    .contact{
+        width:92%;
+        height:auto;
+        padding-top:10px;
+    }
+    .contact > div{
+        margin:0px;
+        margin:60px 0px;
+    }
+    .contact_div01{
+        width:100%;
+        margin:0px auto;
+        display:block;
+    }
+    .contact_div01 img{
+        width:50%;
+        margin:auto;
+        display:block;
+    }
+    .contact_div02{
+        margin-top:40px;
+        width:100%;
+    }
+    .contact_div02 h3{
+        font-size:21px;
     }
 
     /* ******************************************************* FOOTER ******************************** */
     #kontakt{
         margin:auto;
     }
-    #footer_div{
-        width:25%;
+    .footer_div > div{
+        width:40%;
     }
     #copyright{
         font-size:11px;

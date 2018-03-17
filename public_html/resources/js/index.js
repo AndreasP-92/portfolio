@@ -1,7 +1,6 @@
 (function () {
     // fadeOutEffect();
     slideEffect();
-    phone();
     burger();
 })()
 

@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./resources/media/image/favicon.ico" />
     <link rel="stylesheet" href="/static/resources/css/main.css">
-    <link rel="stylesheet" href="./resources/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/resources/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
     <title>Portfolio</title>
 </head>
 
@@ -14,16 +15,19 @@
     <!--************************************************ HEADER *****************************************-->
     <header>
         <!-- NAV -->
+        <div id="burger">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
         <nav>
             <ul id="left_nav">
                 <li>
-                    <a href="/"> Forside </a>
+                    <a href="/forside"> Forside </a>
                 </li>
                 <li>
                     <a href="/egenskaber">Egenskaber</a>
                 </li>
                 <li>
-                    <a href="#"> Projekter </a>
+                    <a href="projekter"> Projekter </a>
                     <ul id="dropDown">
                         <li>
                             <a href="/static/resources/pages/drop_down/stjernev_validator/index.html">Stjerne validater 15/01/18</a>
@@ -46,7 +50,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/kontakt"> Kontakt </a>
+                    <a href="/#"> Kontakt </a>
                 </li>
             </ul>
             <ul id="flag">
@@ -67,6 +71,19 @@
     </header>
     <!-- ************************************************* MAIN ***************************************** -->
     <main class="contact">
+        <ul class="flag_rep">
+            <li>
+                <a href="/" id="himg_04">
+                    <img src="./resources/media/image/index/danish_flag.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="/static/resources/pages/english/main.html" id="himg_03">
+                    <img src="./resources/media/image/index/english_flag.png" alt="">
+                </a>
+            </li>
+
+        </ul>
         <div>
             <div class="contact_div">
                 <div class="contact_div01">
@@ -74,13 +91,13 @@
                     <img src="./resources/media/image/index/profil_billede.png" alt="Profil Billede">
                 </div>
                 <div class="contact_div02">
-                <h3>Jeg er en Web udvikler på 26 år fra København, Denmark.
-                    <br> Jeg kan hjælpe dig med at bygge dit næste produkt.</h3>
-                <p>har du et projekt du vil snakke om, eller en ledig spillig?<br>
-                Hvis du kan svare ja på dette, så fang mig via mail på
-                    <a href="mailto:andreas@mrcaptain.info">Andreas@mrcaptain.info</a>
-                </p>
-            </div>
+                    <h3>Jeg er en Web udvikler på 26 år fra København, Denmark.
+                        <br> Jeg kan hjælpe dig med at bygge dit næste produkt.</h3>
+                    <p class="bold">har du et projekt du vil snakke om, eller en ledig spillig?
+                        <br> Hvis du kan svare ja på dette, så fang mig via mail på
+                        <a href="mailto:andreas@mrcaptain.info">Andreas@mrcaptain.info</a>
+                    </p>
+                </div>
             </div>
 
 
@@ -88,17 +105,21 @@
     </main>
     <!-- ************************************************* FOOTER ************************************************************* -->
     <footer>
-        <p id="kontakt">Kontakt mig på mail eller tlf</p>
-        <div id="footer_div">
-            <!-- <a href="https://www.facebook.com/3123sdas" class="hyper-link" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> -->
-            <a href="mailto:andreas@mrcaptain.info" class="hyper-link">
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
-            </a>
-            <!-- <a href="#" id="phone" class="hyper-link"><i class="fa fa-phone-square" aria-hidden="true"></i></a> -->
-            <i id="phone" class="fa fa-phone-square" aria-hidden="true"></i>
-
+        <div class="footer_div">
+            <div>
+                <a href="mailto:andreas@mrcaptain.info" class="hyper-link">
+                    <i class="fas fa-envelope-square socialMedia"></i>
+                    </i>
+                </a>
+                <a href="https://www.linkedin.com/in/andreas-pedersen-130192156/" target="_blank">
+                    <i class="fab fa-linkedin socialMedia" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/AndreasP-92" target="_blank">
+                    <i class="fab fa-github-square socialMedia" style="margin-left:0px;"></i>
+                </a>
+            </div>
+            <p id="copyright">Hand made by Andreas Pedersen © 2018</p>
         </div>
-        <p id="copyright">Hand made by Andreas Pedersen © 2018</p>
     </footer>
 </body>
 <script src="./resources/js/forside.js"></script>

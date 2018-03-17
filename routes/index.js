@@ -8,7 +8,8 @@ module.exports = (server) => {
     // require('./test')(server)
 
     // HOME
-
     require('./pages_routes/home')(server)
     require('./pages_routes/dropDown')(server)
+    // SLIPSEKNUDEN
+    // require('./slipseknuden_routes')(server)
 }

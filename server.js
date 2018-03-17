@@ -16,7 +16,7 @@ var url     = "mrcaptain.info",
     //     'view engine', 
     //     'html')
     server.set('views', path.join(__dirname, '/public_html/views'));
-    
+
     server.use(express.static(__dirname + '/public'));
 
     server.use(express.static('public_html'));
