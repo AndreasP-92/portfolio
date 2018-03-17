@@ -49,6 +49,7 @@ header:after{
     position: fixed;
     z-index:0;
     top:0px;
+    cursor: pointer;
 }
 #frontPage_border{
     height:60px;
