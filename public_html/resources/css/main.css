@@ -75,6 +75,10 @@ header:after{
     right:30%;
     cursor: pointer;
 }
+#frontPage article i p{
+    color:#619ae4;
+    margin-top: -4px;    
+}
 #frontPage article i:hover{
     transform:rotate(45deg);
 }
