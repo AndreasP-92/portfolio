@@ -12,9 +12,3 @@ function burger (){
         nav.classList.toggle("show")
     })
 }
-// ************************************************* PHONE NUMBER *********************************************************
-function phone (){
-    document.getElementById('phone').addEventListener('click',event=>{
-        alert('Telefon: 28 88 81 92')
-    })
-}
