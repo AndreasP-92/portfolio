@@ -77,7 +77,7 @@ server.post('/send-email', function (req, res) {
             return console.log(dato + '<br>' + error);
         }
         console.log(dato +'<br>' + 'Message %s sent: %s' + '<br>', info.messageId, info.response);
-            res.render('pages/forside');
+            res.render('pages/forside.ejs');
         });
     });
 

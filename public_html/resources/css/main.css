@@ -355,7 +355,7 @@ main p{
     clear: both;
 }
 .skills_a{
-    padding-bottom:50px; 
+    padding-bottom:85px; 
     padding-top:100px;
     border-bottom: 1px solid #d6e1e5;
 }
@@ -469,7 +469,7 @@ main p{
 }
 .skills_h3{
     text-align: center;
-    margin-top:20px;
+    margin-top:50px;
     font-size:30px;
     color:#161d2d;
 }
@@ -1067,11 +1067,11 @@ footer footer_div div:after{
     }
   }
   /* ********************************************************* TABLET RESPONSIVE ************************************* */
-@media only screen and (min-width: 620px) and (max-width:1449px){
+/* @media only screen and (min-width: 620px) and (max-width:1449px){
     body{
         background-color:green;
     }
-}
+} */
 @media only screen and (min-width:620px) {
     #burger{
         display:none;

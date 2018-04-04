@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <% include ../.././partials/english/en-head %>
+</head>
+
+<body>
+    <!--************************************************ HEADER *****************************************-->
+    <header>
+ 
+        <!-- NAV -->
+
+        <% include ../.././partials/english/nav %>
+
+        <!-- NAV END -->
+
+        <h2 id="h2_en"> Contact the Web Shark Andreas</h2>
+    </header>
+    <!-- ************************************************* MAIN ***************************************** -->
+    <main class="contact">
+
+<!-- RESPONSIVE FLAGS -->
+
+<% include ../.././partials/english/resp-flags %>
+
+<!-- RESPONSIVE FLAGS END -->
+
+    <div>
+        <div class="contact_div">
+            <div class="contact_div01">
+
+                <img src="/resources/media/image/index/profil_billede.png" alt="Profil Billede">
+            </div>
+            <div class="contact_div02">
+                <p class="bold" style="padding-bottom:20px;">Do you got a project you would like to talk about, or an available job position?</p>
+                <!-- <h3>Do you got a project you would like to talk about, or an available job position?</h3> -->
+                <p class="bold">
+                    If the answer is yes, then catch me on my Email via
+                    <a href="mailto:andreas@mrcaptain.info">Andreas@mrcaptain.info</a>
+                    , or contact me via the contact form.
+                </p>
+            </div>
+<!-- CONTACT FORM -->
+        <div class="contactForm">
+            <form action="/send-email" method="post" id="contactForm02">
+                <div class="from">
+                    <label for="from">Fra:</label>
+                    <input type="text" class="" name="from">
+                </div>
+                <div class="subject">
+                    <label for="subjecct">Emne:</label>
+                    <input type="text" name="subject">
+                </div>
+                <div class="message">
+                    <label for="message">Besked:</label>
+                    <textarea name="message" id="" cols="45" rows="7"></textarea>
+                </div>
+                <div class="submit">
+                    <button type="submit" id="send">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </main>
+    <!-- ************************************************* FOOTER ************************************************************* -->
+    <footer>
+            <% include ../.././partials/english/footer %>
+    </footer>
+</body>
+<script src="/static/resources/js/skills.js"></script>
+</html>
