@@ -2,7 +2,6 @@ const db = require('../config/sql').connect();
 const passwordHash = require('password-hash');
 const crypto = require('crypto');
 
-console.log('test læst')
 module.exports = function (app) {
 
 

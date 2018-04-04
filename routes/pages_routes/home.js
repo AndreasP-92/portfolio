@@ -4,30 +4,27 @@ module.exports = function (server) {
 
     server.get('/',
         function (req, res) {
-            // console.log('side læst')
-            res.render('pages/index.ejs')
+            res.render('pages/danish/index.ejs')
         }
     );
     server.get('/forside',
         function (req, res) {
-            console.log('forside læst')
-            res.render('pages/forside.ejs')
+            res.render('pages/danish/forside.ejs')
         }
     );
     server.get('/egenskaber',
         function (req, res) {
-            console.log('egenskaber læst')
-            res.render('pages/egenskaber.ejs')
+            res.render('pages/danish/egenskaber.ejs')
         }
     );
     server.get('/kontakt',
         function (req, res) {
-            res.render('pages/kontakt.ejs')
+            res.render('pages/danish/kontakt.ejs')
         }
     );
     server.get('/projekter',
         function (req, res) {
-            res.render('pages/projekter.ejs')
+            res.render('pages/danish/projekter.ejs')
         }
     );
 
@@ -35,7 +32,6 @@ module.exports = function (server) {
 
     server.get('/en-index',
         function (req, res) {
-            console.log('projekter læst')
             res.render('pages/english/main.ejs')
         }
     );
