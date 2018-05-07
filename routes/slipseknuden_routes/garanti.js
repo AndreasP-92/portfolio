@@ -1,9 +1,9 @@
-module.exports = function (app) {
-    app.get('/garanti', function (req, res) {
+module.exports = function (server) {
+    server.get('/slipseknuden/garanti', function (req, res) {
 
         var img = [
             { 
-                img: "images/garanti/img_01.jpg" 
+                img: "/resources/media/image-projects/slipseknuden/garanti/img_01.jpg" 
             }
         ];
         var info = [
@@ -13,11 +13,11 @@ module.exports = function (app) {
                 postnr: "4000 Holbæk",
                 tlf: "Telefon: 5944-1234",
                 mail: "slips@slipseknuden.dk",
-                img: "images/garanti/img_01.jpg"
+                img: "/resources/media/image-projects/slipseknuden/garanti/img_01.jpg"
             }
         ];
 
-        res.render('pages/garanti', {
+        res.render('pages/slipseknuden/garanti.ejs', {
             img: img,
             info: info
         });

@@ -1,0 +1,20 @@
+/* ******************************************************* PROJECTS ********************************************************** */
+
+#danish_project{
+    width:45%;
+    float:left;
+}
+#danish_project:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+#english_project{
+    width:45%;
+    float:left;
+}
+#english_project:after{
+    content:"";
+    display:table;
+    clear:both;
+}

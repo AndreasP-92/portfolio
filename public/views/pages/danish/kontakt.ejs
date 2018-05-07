@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <% include ../.././partials/danish/head %>
+</head>
+
+<body>
+    <!--************************************************ HEADER *****************************************-->
+    <header>
+
+        <!-- NAV -->
+
+        <% include ../.././partials/danish/nav %>
+
+        <!-- NAV END -->
+
+        <h2>Kontakt Web Hajen Andreas</h2>
+    </header>
+    <!-- ************************************************* MAIN ***************************************** -->
+    <main class="contact">
+
+<!-- RESPONSIVE FLAGS -->
+
+<% include ../.././partials/danish/resp-flags %>
+
+<!-- RESPONSIVE FLAGS END -->
+
+        <div>
+            <div class="contact_div">
+                <div class="contact_div01">
+
+                    <img src="./resources/media/image/index/profil_billede.png" alt="Profil Billede">
+                </div>
+                <div class="contact_div02">
+                    <h3>Har du et projekt du vil snakke om, eller en ledig stillig?</h3>
+                    <p class="bold">
+                        <br> Hvis du kan svare ja på dette, så fang mig via Email på
+                        <a href="mailto:andreas@mrcaptain.info">Andreas@mrcaptain.info</a>
+                        , eller opsøg mig via kontakt formen.
+                    </p>
+                </div>
+<!-- CONTACT FORM -->
+            <div class="contactForm">
+                <form name="myForm" action="/send-email" method="post" onsubmit="return formValidate();">
+                    <div class="from">
+                        <label for="from">Email:</label>
+                        <input type="text" id="name" name="from">
+                    </div>
+                    <div class="subject">
+                        <label for="subjecct">Emne:</label>
+                        <input type="text" id="topic" name="subject">
+                    </div>
+                    <div class="message">
+                        <label for="message">Besked:</label>
+                        <textarea name="message" id="msg" cols="45" rows="7"></textarea>
+                    </div>
+                    <div class="submit">
+                        <button type="submit" id="send">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+    <!-- ************************************************* FOOTER ************************************************************* -->
+    <footer>
+        <% include ../.././partials/danish/footer %>
+    </footer>
+</body>
+<script src="./resources/js/kontakt.js"></script>
+
+</html>

@@ -9,6 +9,7 @@ module.exports = function (app) {
     app.get('/kategorier', function (req, res) {
         console.log('data læst')
         db.query('select * from fk_kategori', function (err, data) {
+            console.log(data)
             res.send(data);
         })
         db.end();

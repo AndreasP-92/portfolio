@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../../partials/projects/slipseknuden/head %>
+</head>
+
+<body>
+    <header>
+        <% include ../../partials/projects/slipseknuden/header %>
+    </header>
+    <main>
+        <% include ../../partials/projects/slipseknuden/nav-left %>
+            <div id="nyheder">
+                <h3>NYHEDER</h3>
+                <% artikkel_01.forEach(function(artikkel_01) { %>
+                    <article class="Narticle">
+
+                        <p class="dato">
+                            <%= artikkel_01.dato %>
+                        </p>
+                        <h4>
+                            <%= artikkel_01.overskrift %>
+                        </h4>
+                        <p>
+                            <%= artikkel_01.ny %>
+                        </p>
+
+                    </article>
+                    <% }); %>
+
+            </div>
+
+    </main>
+    <footer>
+            <% include ../../partials/projects/slipseknuden/footer %>
+    </footer>
+</body>
+
+</html>

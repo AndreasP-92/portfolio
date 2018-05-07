@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <% include ../../partials/projects/slipseknuden/head %>
+</head>
+
+<body>
+    <header>
+            <% include ../../partials/projects/slipseknuden/header %>
+    </header>
+    <main>
+            <% include ../../partials/projects/slipseknuden/nav-left %>
+            <div id="produkter">
+                <% artikkel_01.forEach(function(artikkel_01) { %>
+                <div id="produkt_01">
+                    <span class="pspan">
+                                <img src="<%= artikkel_01.img %>" alt="">
+        
+                                <h4>
+                                    <%= artikkel_01.tittel %>
+                                </h4>
+                                <p>
+                                    <%= artikkel_01.beskrivelse %>
+                                </p>
+                                <p class="ppris">
+                                        <%= artikkel_01.pris %>
+                                </p>    
+                                <div class="info">
+                                    <a href="/slipseknuden/produkt/<%= artikkel_01.id %>">INFO</a>
+                                </div>
+                            </span>
+                        </div>
+                        <% }); %>
+            </div>
+
+    </main>
+    <footer>
+            <% include ../../partials/projects/slipseknuden/footer %>
+    </footer>
+</body>
+
+</html>

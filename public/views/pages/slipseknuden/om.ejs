@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <% include ../../partials/projects/slipseknuden/head %>
+</head>
+
+<body>
+    <header>
+            <% include ../../partials/projects/slipseknuden/header %>
+    </header>
+    <main>
+            <% include ../../partials/projects/slipseknuden/nav-left %>
+            <div id="om">
+                <article>
+                    <h3>SLIPSEKNUDEN</h3>
+                    <p>Slipseknuden blev etableret i 1984 da og blev straks kendt som en butik med slips i de aller fineste
+                        kvalietsslips. Tilbage i 80'erne var der 5 ansatte og siden er det gået enormt stærkt, i dag er slipseknuden
+                        en verdensomspændende æde af slipsebutkker fordelt i hele europa med tusindvis af ansatte. Slipseknuden
+                        har kun det ypperste indenfor slips. Hos os finder du kvalitetsvarer der er usammenlignelige med
+                        andre slips. Et slips fra os vil bliver bemærket overalt du måtte færdes. Vores slips signalere kvaltet
+                        og god smag!</p>
+                    <img src="\resources\media\image-projects\slipseknuden\ansatte\img_01.jpg" alt="slips">
+                </article>
+                <% artikkel_01.forEach(function(artikkel_01) { %>
+                <span>
+                    <div id="arb_01">
+                        <img src="<%= artikkel_01.img %>" alt="">
+
+                        <h4>
+                            <%= artikkel_01.navn %>
+                        </h4>
+                        <br>
+                        <p>
+                            <%= artikkel_01.job %>
+                        </p>
+                        <br>
+                        <p>
+                                <%= artikkel_01.email %>
+                        </p>
+                    </div>
+                    
+                </span>
+                <% }); %>
+            </div>
+
+    </main>
+    <footer>
+            <% include ../../partials/projects/slipseknuden/footer %>
+    </footer>
+</body>
+
+</html>

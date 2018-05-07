@@ -1,0 +1,452 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+
+
+
+/************************************************************** NAVIGATION *****************************************************/
+
+#nav{
+    width:100%;
+    background-color:black;
+}
+#nav:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+
+#nav ul{
+    list-style-type:none;
+    width:80%;
+    float:left;
+    margin:10px;
+}
+#nav ul:after{
+    content:"";
+    display: table;
+    clear:both;
+}
+#nav ul li{
+    float:left;
+    /* width:15% */
+    margin-right:5%;
+}
+#nav ul li a{
+    text-decoration: none;
+    color:white;
+    width:100%;
+    font-size:22px;
+}
+
+/* SØGEBAR ---------------------------------- */
+
+#nav form{
+    padding:10px;
+    float:left;
+}
+#nav form input{
+    height:23px;
+}
+#nav form a i{
+    color:white;
+    margin-right:5px;
+    font-size:19px;
+}
+#nav form button{
+    height:23px;
+}
+/* LOGO --------------------------------------- */
+#logo{
+    width:50%;
+    margin-left: 15px;
+    padding-bottom: 20px;
+}
+
+/* **************************************************************** MAIN ***************************************************** */
+
+main:after{
+    content:"";
+    display: table;
+    clear:both;
+}
+
+/* **************************************************************** NAV-LEFT ************************************************* */
+
+#nav_left{
+    float: left;
+    width:25%;
+    height:1000px;
+}
+#nav_left h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* NAV -------------------------------------- */
+
+#nav_left nav{
+    width:85%;
+    background-color:black;
+    float:right;
+}
+#nav_left nav ul{
+    list-style-type:none;
+
+}
+#nav_left nav ul:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+#nav_left nav ul li{
+    float: left;
+    width:100%;
+    margin-top:35px;
+    border-bottom:2px solid white;
+    padding-bottom:10px;
+
+}
+#nav_left nav ul li a{
+    text-decoration: none;
+    color:white;
+    padding-left: 20px;
+
+}
+/* ARTICLE ----------------------------------- */
+
+#nav_article{
+    width:100%;
+    float:left;
+}
+#nav_article:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+#nav_article article{
+    margin:auto;
+    width:50%;
+}
+#nav_article article h3{
+    font-size:15px;
+    padding-bottom:10px;
+    padding-top:60px;
+}
+#nav_article article p{
+    font-size:15px;
+    padding-bottom: 10px;
+}
+#nav_article article a{
+    text-decoration: none;
+    color:black;
+    font-weight:bold;
+}
+
+/* ******************************************************************** INDEX ****************************************************** */
+
+/* UDSATTE --------------------------------- */
+
+#udsatte{
+    width:75%;
+    float:right;
+}
+#udsatte:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+#udsatte div:nth-child(1){
+    float:left;
+    width:50%;
+}
+#udsatte div:nth-child(2){
+    float: right;
+    width:50%;
+}
+#udsatte div article{
+    width:100%;
+}
+#udsatte div article:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+#udsatte div article img{
+    width:70%;
+    display:block;
+}
+#udsatte div article h3{
+    padding-top:20px;
+    margin-left: 23%
+}
+#udsatte div article p:nth-of-type(1){
+    padding-top: 10px;
+    margin-left:23%;
+}
+#udsatte div article #pris{
+    margin-left: 23%;
+    font-size:20px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+#udsatte div article a{
+    width:100%;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    display:block;
+    padding-top:4px;
+    font-weight: bold;
+}
+.info{
+    margin-left: 23%;
+    width:20%;
+    border-radius:20px;
+    background-color:black;
+    height:25px;
+    margin-top:10px;
+    
+}
+
+/* article -------------------------------------*/
+
+#index{
+    padding-top: 6%;
+    float:left;
+    width:65%;
+}
+#index h4{
+    margin-left: 11%;
+    font-weight: bold;
+    font-size:20px;
+
+}
+#index p{
+    margin-left: 11%;
+    padding-top: 20px;
+}
+
+/* ******************************************************************* FOOTER ************************************************* */
+
+footer ul{
+    width:80%;
+    list-style-type: none;
+    margin: auto;
+}
+footer ul:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+footer ul li{
+    float: left;
+    width:14%;
+    text-align: center;
+}
+footer ul li:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+/* ********************************************************** GARANTI ****************************************************** */
+
+#garanti{
+    width:70%;
+    float:right;
+}
+#garanti h3{
+    margin-bottom:20px;
+}
+#garanti p{
+    margin-bottom:20px;
+}
+#garanti ul{
+    list-style-type:none;
+    font-weight:bold;
+}
+#garanti img{
+    /* float:right; */
+    display: block;
+    margin:auto;
+}
+
+/* ******************************************************* NYHEDER *********************************************************** */
+
+#nyheder{
+    float:right;
+    width:70%;
+    padding-left:3%;
+}
+#nyheder article{
+    float: left;
+    width:100%;
+}
+#nyheder article:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+#nyheder h3{
+    margin-bottom:2%;
+}
+#nyheder  .Narticle{
+    margin-bottom:2%;
+}
+.dato{
+    color:orange;
+    font-weight:bold;
+}
+
+/* ************************************************************************ OM ******************************************************** */
+#om{
+    float: left;
+    width:75%;
+    padding-left: 5%;
+    padding-right:2%;
+}
+#om:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+
+#om article img{
+    display: block;
+    margin:auto;    
+}
+#om span{
+    margin-bottom: 30px;
+    float:left;
+    width:75%;
+}
+#om span:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+/* ARB_01 -------------------------- */
+span:nth-of-type(1){
+    float: left;
+    width:100%;
+}
+span:nth-of-type(1):after{
+    content:"";
+    display: block;
+    clear:both;
+}
+span:nth-of-type(1) img{
+    float: left;
+    margin-right:15px;
+}
+span:nth-of-type(2) h4, span:nth-of-type(1) p{
+    float:left;
+    bottom:0;
+}
+
+/* ARB_02 ------------------------------ */
+
+span:nth-of-type(2){
+    float: left!important;
+    width:52%!important;
+    padding-top:3%!important;
+}
+span:nth-of-type(2):after{
+    content:"";
+    display: block;
+    clear:both;
+}
+span:nth-of-type(2) img{
+    float: left;
+    margin-right:15px;
+    /* width:50%; */
+}
+span:nth-of-type(3) h4, span:nth-of-type(2) p{
+    float:right;
+    bottom:0;
+}
+/* ARB_03 ------------------------------- */
+span:nth-of-type(3){
+    float: right!important;
+    width:48%!important;
+    padding-left:7%!important;
+    padding-top:3%!important;
+}
+span:nth-of-type(3):after{
+    content:"";
+    display: block;
+    clear:both;
+}
+span:nth-of-type(3) img{
+    float: left;
+    /* margin-right:10px; */
+}
+span:nth-of-type(3) h4, span:nth-of-type(3) p{
+    float:right;
+    bottom:0;
+}
+
+/* ********************************************************* PRODUKTER **************************************************** */
+
+#produkter{
+    width:70%;
+    float:left;
+    padding-left:3%;
+}
+#produkter:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+/* PRODUKT 01 -------------------------- */
+#produkt_01{
+    float: left;
+    width:100%;
+    height:250px;
+}
+#produkt_01:after{
+    content:"";
+    display: block;
+    clear : both;
+}
+#produkt_01 .pspan{
+    /* float:left; */
+    width:30%;
+}
+#span:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+
+#produkt_01 .pspan img{
+    width:55%;
+    float:left;
+}
+#produkt_01 .pspan p, #produkt_01 .pspan h4{
+    /* float:right; */
+    /* width:30%; */
+    margin-left:5%;
+}
+.ppris{
+    font-weight:bold;
+    /* position: fixed; */
+    bottom:0px;
+}
+#produkt_01 .pspan .info{
+    width:35%;
+    float:left;
+}
+#produkt_01 .pspan a{
+        width:100%;
+        color:white;
+        text-decoration: none;
+        text-align: center;
+        display:block;
+        padding-top:4px;
+        font-weight: bold;
+}

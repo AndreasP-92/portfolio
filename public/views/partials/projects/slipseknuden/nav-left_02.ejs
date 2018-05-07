@@ -1,0 +1,34 @@
+<div id="nav_left">
+        <h2>PRODUKTER</h2>
+        <nav>
+            <ul>
+                <li><a href="#">ALLE</a></li>
+                <li><a href="#">SHOON</a></li>
+                <li><a href="#">KOREA SPECAIL</a></li>
+                <li><a href="#">US. IMPORTS</a></li>
+                <li><a href="#">SLEEK FABRICS UK</a></li>
+            </ul>
+        </nav>
+        <div id="nav_article">>
+            <article>
+                <% image.forEach(function(image) { %>
+                    <span class="pspan">
+                                <img src="<%= img.img %>" alt="">
+        
+                                <h4>
+                                    <%= img.tittel %>
+                                </h4>
+                                <p>
+                                    <%= img.beskrivelse %>
+                                </p>
+                                <p class="ppris">
+                                        <%= img.pris %>
+                                </p>    
+                                <div class="info">
+                                    <a href="#">INFO</a>
+                                </div>
+                            </span>
+                    <% }); %>
+            </article>
+        </div>
+    </div>

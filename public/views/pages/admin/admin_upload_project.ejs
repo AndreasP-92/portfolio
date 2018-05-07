@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../.././partials/admin/head %>
+</head>
+
+<body>
+    <!--************************************************ HEADER *****************************************-->
+    <header>
+
+        <!-- NAV -->
+
+        <% include ../.././partials/admin/nav %>
+
+            <!-- NAV END -->
+
+            <h2>Insert Project</h2>
+    </header>
+    <!-- ************************************************* MAIN ***************************************** -->
+    <main class="admin">
+<!-- *************************************************** INSERT DANISH PROJECT ********************************************* -->
+        
+        <div id="danish_project">
+            <h3>Insert Danish Project</h3>
+<!-- LINK ==================================================== -->
+            <h4>Link</h4>
+            <input type="text" class="input_link" value="">
+<!-- TITLE ==================================================== -->
+            <h4>Title</h4>
+            <input type="text" class="input_title" value="">
+<!-- IMAGE ==================================================== -->
+            <h4>Image</h4>
+            <input type="text" class="input_image" value="">
+<!-- DATE ============================================== -->
+            <h4>DATE</h4>
+            <p class="date">
+                Insert dd/mm/yyyy
+            </p>
+            <input type="text" class="input_date" value="">
+<!-- TEXT 01 ===================================================== -->
+            <h4>text 01</h4>
+            <textarea name="text" class="input_text_01" cols="30" rows="5"></textarea>
+<!-- TEXT 02 ===================================================== -->
+            <h4>text 02</h4>
+            <textarea name="text" class="input_text_02" cols="30" rows="5"></textarea>
+<!-- TEXT 03 ===================================================== -->
+            <h4>text 03</h4>
+            <textarea name="text" class="input_text_03" cols="30" rows="5"></textarea>
+<!-- VIS/SKJUL ================================================ -->
+            <!-- <h4>Show = 1 | Hide = 0</h4>
+            <input type="text" class="input_show" value=""> -->
+
+            <button onclick="saveDK();">Upload</button>
+        </div>
+<!-- *************************************************** INSERT ENGLISH PROJECT ********************************************* -->
+        <div id="english_project">
+            <h3>Insert English Project</h3>
+    <!-- LINK ==================================================== -->
+            <h4>Link</h4>
+            <input type="text" class="input_link_en" value="">
+    <!-- TITLE ==================================================== -->
+            <h4>Title</h4>
+            <input type="text" class="input_title_en" value="">
+    <!-- IMAGE ==================================================== -->
+            <h4>Image</h4>
+            <input type="text" class="input_image_en" value="">
+    <!-- DATE ============================================== -->
+            <h4>DATE</h4>
+            <p class="date">
+                Insert dd/mm/yyyy
+            </p>
+            <input type="text" class="input_date_en" value="">
+    <!-- TEXT 01 ===================================================== -->
+            <h4>text 01</h4>
+            <textarea name="text" class="input_text_01_en" cols="30" rows="5"></textarea>
+    <!-- TEXT 02 ===================================================== -->
+            <h4>text 02</h4>
+            <textarea name="text" class="input_text_02_en" cols="30" rows="5"></textarea>
+    <!-- TEXT 03 ===================================================== -->
+            <h4>text 03</h4>
+            <textarea name="text" class="input_text_03_en" cols="30" rows="5"></textarea>
+    <!-- VIS/SKJUL ================================================ -->
+            <!-- <h4>Show = 1 | Hide = 0</h4>
+            <input type="text" class="input_show_en" value=""> -->
+
+            <button onclick="saveEN();">Upload</button>
+        </div>
+    </main>
+    <!-- ************************************************* FOOTER ************************************************************* -->
+    <footer>
+        <% include ../.././partials/danish/footer %>
+    </footer>
+</body>
+<script src="/resources/js/pages/admin/admin_create_project.js"></script>
+
+</html>

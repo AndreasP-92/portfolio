@@ -1,5 +1,5 @@
 module.exports = function (app){
-    app.get('/nyheder',function(reg,res){
+    app.get('/slipseknuden/nyheder',function(reg,res){
 
     var artikkel_01 =[
         {   id: 1,
@@ -22,7 +22,7 @@ module.exports = function (app){
             overskrift : 'Nu er de her!',
             ny : 'Se vores nyeste slips under produkter!' }
     ];
-            res.render('pages/nyheder',{
+            res.render('pages/slipseknuden/nyheder.ejs',{
                 artikkel_01 : artikkel_01,
 
             })

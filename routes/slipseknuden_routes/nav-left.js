@@ -4,7 +4,7 @@ module.exports = function (app) {
         var image = [
             {
                 id: 01,
-                img: 'images/produkter/img_01.jpg',
+                img: '/resources/media/image-projects/slipseknuden/produkter/img_01.jpg',
                 tittel: 'Shoon Slips',
                 beskrivelse: 'Klassisk Brun',
                 pris: 'DKK 450 -.'
@@ -12,13 +12,13 @@ module.exports = function (app) {
 
             {
                 id: 02,
-                img: 'images/produkter/img_02.jpg',
+                img: '/resources/media/image-projects/slipseknuden/produkter/img_02.jpg',
                 tittel: 'Shoon Slips',
                 beskrivelse: 'Klassisk Brun',
                 pris: 'DKK 450 -.'
             },
         ]
-        res.render('pages/partials/nav-left_02', {
+        res.render('pages/slipseknuden/nav-left_02', {
             image : image,
         })
     })

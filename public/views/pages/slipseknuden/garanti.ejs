@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <% include ../../partials/projects/slipseknuden/head %>
+</head>
+
+<body>
+    <header>
+            <% include ../../partials/projects/slipseknuden/header %>
+    </header>
+    <main>
+            <% include ../../partials/projects/slipseknuden/nav-left %>
+            <div id="garanti">
+                <h3>Reklamation</h3>
+                <p>slipseknuden.eu kontrollerer alle varer inden afsendelse. Skulle der alligevel være fejl ved en ekspedition
+                    henvises til den returseddel, der følger med din ordre. Denne returseddel udfyldes og returneres sammen
+                    med varerne. Varer der returneres med reklamation, bliver repareret eller erstattet af en ny leverance
+                    indenfor 7 dage fra modtagelsen. Haves erstatningsvare ikke, vil det betalte beløb blive krediteret indenfor
+                    7 dage. Derudover gælder naturligvis den 2-årige reklamationsfrist i henhold til købeloven.</p>
+                <p>Du er også velkommen til at kontakte vores kundeservice på salg@slipseknuden.eu eller tlf. (+45) 5944-1234.
+                    Vi beder dig have dit ordrenummer ved hånden.</p>
+                    <% info.forEach(function(info) { %>
+                    <ul>
+                        <li>
+                            <p>Returadressen er:</p>
+                        </li>
+                        <li>
+                        <p><%= info.navn %></p>
+                    </li>
+                    <li>
+                        <p><%= info.vej %></p>
+                    </li>
+                    <li>
+                        <p><%= info.postnr %></p>
+                    </li>
+                    <li>
+                        <p><%= info.tlf %></p>
+                    </li>
+                    <li>
+                        <p><%= info.mail %></p>
+                    </li>
+                </ul>
+                <img src="<%= info.img %>" alt="Slips">
+                <% }); %>   
+            </div>
+    </main>
+<footer>
+        <% include ../../partials/projects/slipseknuden/footer %>
+</footer>
+</body>
+
+</html>

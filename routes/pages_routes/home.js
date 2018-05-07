@@ -22,11 +22,7 @@ module.exports = function (server) {
             res.render('pages/danish/kontakt.ejs')
         }
     );
-    server.get('/projekter',
-        function (req, res) {
-            res.render('pages/danish/projekter.ejs')
-        }
-    );
+
 
     // ************************************************************ ENGLISH ROUTES *****************************************************
 
@@ -45,11 +41,7 @@ module.exports = function (server) {
             res.render('pages/english/skills.ejs')
         }
     );
-    server.get('/projects',
-        function (req, res) {
-            res.render('pages/english/projects.ejs')
-        }
-    );
+
     server.get('/contact',
         function (req, res) {
             res.render('pages/english/contact.ejs')

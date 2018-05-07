@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../.././partials/danish/head %>
+</head>
+
+<body>
+    <!--************************************************ HEADER *****************************************-->
+    <header>
+
+        <!-- NAV -->
+
+        <% include ../.././partials/danish/nav %>
+
+        <!-- NAV END -->
+
+        <h2>Hajens Projekter</h2>
+    </header>
+    <!-- ************************************************* MAIN ***************************************** -->
+    <main class="projects">
+
+<!-- RESPONSIVE FLAGS -->
+
+<% include ../.././partials/danish/resp-flags %>
+
+<!-- RESPONSIVE FLAGS END -->
+
+        <div class="project_div">
+            <% projectData.forEach(function(elm) { %>
+                <article>
+                    <h3><%= elm.project_title %></h3>
+                    <a href="<%= elm.project_link %>" target="_blank">
+                        <img src="/resources/media/image/projects/<%= elm.project_image %>" alt="">
+                    </a>
+                    <p class="bold"><%= elm.project_date %></p>
+                    <p class="project_text_01"><%= elm.project_text_01 %></p>
+                    <p class="project_text_02"><%= elm.project_text_02 %></p>
+                    <p class="project_text_03"><%= elm.project_text_03 %></p>
+                    
+                </article>
+            <% }); %>
+        <!-- <div class="project_div">
+            <article>
+                <h3>TEKST HER</h3>
+                <a href="/static/resources/pages/stjernev_validator/index.html" target="_blank">
+                    <img src="/resources/media/image/projects/star_validator.PNG" alt="">
+                </a>
+                <p></p>
+            </article>
+            <article>
+                <h3>TEKST HER</h3>
+                <a href="" target="_blank">
+                    <img src="/resources/media/image/projects/star_validator.PNG" alt="">
+                </a>
+                <p></p>
+            </article>
+            <article>
+                <h3>TEKST HER</h3>
+                <a href="/static/resources/pages/stjernev_validator/index.html" target="_blank">
+                    <img src="/resources/media/image/projects/star_validator.PNG" alt="">
+                </a>
+                <p></p>
+            </article> -->
+        </div> 
+
+    </main>
+    <!-- ************************************************* FOOTER ************************************************************* -->
+    <footer>
+            <% include ../.././partials/danish/footer %>
+    </footer>
+</body>
+<script src="./resources/js/projects.js"></script>
+
+</html>
