@@ -72,8 +72,9 @@ var artikkel_01 = [
     },
 ];
 
-var produkter = require('../.././public/resources/data/projects/slipseknuden/data/produkter.json').produkter;
-var slips = require('../.././public/resources/modules/slipseknuden/slips')
+var produkter = require('../.././public/resources/data/projects/slipseknuden/data/slipseknuden/produkter').produkter;
+// /resources/js/pages/admin/admin_create_project.js
+var slips = require('../.././public/resources/data/projects/slipseknuden/data/slipseknuden/slips')
 // var multer = require('multer'); // v1.0.5
 // var upload = multer();
 
