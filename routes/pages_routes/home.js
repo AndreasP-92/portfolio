@@ -2,7 +2,7 @@ module.exports = function (server) {
 
     // **************************************************** DANISH ROUTES ************************************************************
 
-    server.get('/',
+    server.get('/dk-index',
         function (req, res) {
             res.render('pages/danish/index.ejs')
         }
@@ -26,7 +26,7 @@ module.exports = function (server) {
 
     // ************************************************************ ENGLISH ROUTES *****************************************************
 
-    server.get('/en-index',
+    server.get('/',
         function (req, res) {
             res.render('pages/english/main.ejs')
         }
