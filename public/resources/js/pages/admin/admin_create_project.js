@@ -4,6 +4,8 @@
 
 // ****************************************************** UPLOAD DANISH PROJECT ************************************************
 
+const port = "80"
+
 function saveDK (){
 // GET VALUE FROM UPDATE PAGE =====================================================
 let project_link 		= document.querySelector('.input_link').value,
@@ -41,16 +43,14 @@ let project_link 		= document.querySelector('.input_link').value,
 
 	// console.log('============init admin *43======== \n', init)
 
-	let request = new Request ('http://localhost/json/project/create/project/dk', init);
+	let request = new Request (`http://localhost:${port}/json/project/create/project/dk`, init);
 
 	let verify = 
 		project_link        != "" &&
 		project_title		!= "" &&
 		project_image       != "" &&
 		project_date      	!= "" &&
-		project_text_01  	!= "" &&
-		project_text_02   	!= "" &&
-		project_text_02     != "" ;
+		project_text_01  	!= "";
 
 // FETCHING ============================================================================
 
@@ -115,7 +115,7 @@ let project_link_en 		= document.querySelector('.input_link_en').value,
 	console.log('============init admin *122======== \n', init)
 
 
-	let request = new Request ('http://localhost/json/project/create/project/en', init);
+	let request = new Request (`http://localhost${port}/json/project/create/project/en`, init);
 
 	let verify = 
 		project_link_en	        != "" &&
