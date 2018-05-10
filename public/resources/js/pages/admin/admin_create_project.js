@@ -122,9 +122,7 @@ let project_link_en 		= document.querySelector('.input_link_en').value,
 		project_title_en		!= "" &&
 		project_image_en        != "" &&
 		project_date_en      	!= "" &&
-		project_text_01_en  	!= "" &&
-		project_text_02_en   	!= "" &&
-		project_text_02_en      != "" ;
+		project_text_01_en  	!= "";
 	console.log(request)
 // FETCHING ============================================================================
 
