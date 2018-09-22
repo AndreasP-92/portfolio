@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../.././partials/site/head %>
+    <link rel="stylesheet" href="/resources/pages/cultural_center/css/star.css">
+</head>
+
+<body style="background-color:white;">
+    <header>
+        <% include ../.././partials/site/nav %>
+    </header>
+    <main>
+        <% if(categoryCheck == false){ %>
+
+            <% include ../.././partials/site/aktiviteter/main %>
+
+            <% } else if(categoryCheck == true){ %>
+
+                    <% include ../.././partials/site/aktiviteter/kategori %>
+
+            <% } %>
+            
+
+            
+    </main>
+    <footer>
+    </footer>
+</body>
+<% include ../.././partials/site/script %>
+<script src='http://production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src="/static/resources/pages/cultural_center/js/pages/public/aktiviteter.js"></script>
+<script src="/static/resources/pages/cultural_center/js/pages/public/star.js"></script>
+
+</html>

@@ -1,8 +1,8 @@
 const db = require('../../config/sql').connect();
 const passwordHash = require('password-hash');
 const crypto = require('crypto');
-module.exports = (app) => {
-  app.post('/login', (req, res) => {
+module.exports = (server) => {
+  server.post('/login', (req, res) => {
     if (req.body.password !== '' && req.body.username !== '') {
       console.log(passwordHash.generate(req.body.password));
       db.execute('SELECT id, password FROM users WHERE username = ?', [req.body.username], (selError, rows) => {

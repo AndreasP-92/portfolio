@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <% include ../.././partials/admin/head %>
+</head>
+
+<body style="background-color:white;">
+    <header>
+        <% include ../.././partials/admin/header %>
+    </header>
+    <main>
+        <div class="container">
+            <h1>ADMIN PANEL - UPLOAD BILLEDE</h1>
+            <h3>Sorteret efter nyeste arrangementer</h3>
+        </div>
+<!-- ALL ARRANGEMENT IMAGES -->
+        <div class="container">
+            <% arrangementData.forEach(function(elm) { %>
+                <h4><%= elm.arrangement_title %></h4>
+                <img src="/static/resources/pages/cultural_center/media/aktiviteter/<%= elm.arrangement_imgPath %>" alt="<%= elm.arrangement_title %>">
+                <form ref='uploadForm' id='uploadForm' action='http://localhost:1337/json/arrangement/create/activity/upload_img/<%= elm.arrangement_id %>' method='post'encType="multipart/form-data">
+                    <input type="file" name="sampleFile" />
+                    <input type='submit' value='Upload!' />
+                </form>
+            <% }) %>
+        </div>
+        
+
+
+
+
+    </main>
+    <footer>
+        <% include ../.././partials/admin/footer %>
+    </footer>
+</body>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src="/static/resources/js/pages/admin/admin_update_activity.js"></script>
+
+</html>

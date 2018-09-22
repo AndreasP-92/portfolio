@@ -1,0 +1,38 @@
+.calculator{
+    height:450px;
+    width:300px;
+    background-color:grey;
+}
+.calculator-display{
+    height:75px;
+    background-color:rgb(43, 42, 42);
+    color:white;
+    font-size:60px;
+    text-align:right;
+    width:300px!important;
+    float:right;
+}
+.calculator-keyboard:after{
+    content:"";
+    display:table;
+    clear: both;
+}
+.input-keys{
+    float:left;
+    width:225px;
+}
+.calculator-key{
+    width:75px;
+    height:75px;
+    /* float:left; */
+}
+keyclear{
+    background-color:orange;
+}
+.operator-keys{
+    width:75px;
+    float:right;
+}
+.key-0{
+    width:150px;
+}

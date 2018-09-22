@@ -3,7 +3,7 @@ const passwordHash = require('password-hash');
 const crypto = require('crypto');
 
 module.exports = (app) => {
-    app.post('/login', (req, res) => {
+    server.post('/login', (req, res) => {
         console.log(req.body.username);
         db.execute('SELECT idusers, password FROM users WHERE username = ?', [req.body.username], (selError, rows) => {
             if (passwordHash.verify(req.body.password, rows[0].password)) {

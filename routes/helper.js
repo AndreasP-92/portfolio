@@ -5,11 +5,13 @@ module.exports = (server) => {
 
     // PAGES DANISH ROUTES
 
-    require('./pages_routes/pages_danish_routes/projects.js')(server)
+    require('./pages_routes/pages_danish_routes/ejsProjects.js')(server)
+    require('./pages_routes/pages_danish_routes/reactProjects.js')(server)
 
     // PAGES ENGLISH ROUTES
 
-    require('./pages_routes/pages_english_routes/english.js')(server)
+    require('./pages_routes/pages_english_routes/ejsProjects.js')(server)
+    require('./pages_routes/pages_english_routes/reactProjects.js')(server)
 
     // PAGES ADMIN ROUTES
 
@@ -30,4 +32,8 @@ module.exports = (server) => {
     require('./hifi_routes/index.js')(server)
     require('./hifi_routes/login.js')(server)
     require('./hifi_routes/produkt.js')(server)
+
+    // ************************************************************* Cultural Center ********************************************
+
+    require('./culturalCenter_routes/helper.js')(server)
 }

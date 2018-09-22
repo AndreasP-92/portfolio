@@ -1,0 +1,70 @@
+<a href="/culturalcenter/aktiviteter">Aktiviteter > </a><a href="/culturalcenter/aktiviteter/<%= categoryData[0].arrangement_link %>"><%= categoryData[0].category_title %></a>
+    <div class="category container">
+        <div>
+          
+        
+            <% arrangementData.forEach(function(elm) { %>
+
+                <div class="categoryItem">
+                    <h2 class="categoryTitle">
+                        <%= elm.arrangement_title %>
+                    </h2>
+                    <img src="/static/resources/pages/cultural_center/media/aktiviteter/<%= elm.arrangement_imgPath %>" alt="" class="categoryImg">
+                    <p class="categoryText">
+                        <%= elm.arrangement_text %>
+                    </p>
+                    <p class="categoryAdress">
+                        Adresse:
+                        <%= elm.adress_name %>
+                    </p>
+                    <p class="categoryBuilding">
+                        Bygning Nummer:
+                        <%= elm.building_number %>
+                    </p>
+                    <p class="date">Start Dato:
+                        <%= elm.arrangement_dateStart %>
+                    </p>
+                    <p class="date">Slut Dato:
+                        <%= elm.arrangement_dateEnd %>
+                    </p>
+                    <p class="price">
+                        Pris:
+                        <%= elm.arrangement_price %> kr
+                    </p>
+                    <table>
+                        <thead>
+                           <tr>
+                             <th>Aktivitet Bedømmelse</th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           <tr class="hotel-a">
+                             <td>
+                                <div class="rating">
+                                    <div class="rating__stars">
+                                        <div class="stars-outer">
+                                            <div id="star" class="star stars-inner" data-rating="<%= elm.arrangement_rating / elm.arrangement_vote %>"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form action="/JSON/activity/rating/<%= elm.arrangement_id %>" method="post" >
+                                 <select name="rating" id="rating">
+                                     <option value="1">1</option>
+                                     <option value="2">2</option>
+                                     <option value="3">3</option>
+                                     <option value="4">4</option>
+                                     <option value="5">5</option>
+                                 </select>
+                                 <input type="submit" value="Angiv stjerne(r)">
+                                 <p><%= elm.arrangement_vote %> Brugere har bedømt denne aktivitet</p>
+                             </form>
+                             </td>
+                           </tr>
+                        </tbody>    
+                    </table>
+
+                <!-- <i class="fa fa-star-o" aria-hidden="true"></i> -->
+                </div>
+            <% }); %>
+        </div>
+    </div>

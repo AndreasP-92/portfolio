@@ -1,5 +1,5 @@
-module.exports = function (app){
-    app.get('/slipseknuden/nyheder',function(reg,res){
+module.exports = function (server){
+    server.get('/slipseknuden/nyheder',function(reg,res){
 
     var artikkel_01 =[
         {   id: 1,

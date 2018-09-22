@@ -12,6 +12,14 @@ module.exports = function (server) {
             res.render('pages/danish/forside.ejs')
         }
     );
+    server.get('/projekter',
+        function (req, res) {
+            categoryCheck = ""
+            res.render('pages/danish/projekter.ejs',{
+                categoryCheck : categoryCheck
+            })
+        }
+    );
     server.get('/egenskaber',
         function (req, res) {
             res.render('pages/danish/egenskaber.ejs')
@@ -39,6 +47,14 @@ module.exports = function (server) {
     server.get('/skills',
         function (req, res) {
             res.render('pages/english/skills.ejs')
+        }
+    );
+    server.get('/projects',
+        function (req,res){
+            var categoryCheck = "";
+            res.render("pages/english/projects.ejs",{
+                categoryCheck : categoryCheck
+            })
         }
     );
 

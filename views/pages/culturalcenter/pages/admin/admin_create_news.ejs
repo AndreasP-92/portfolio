@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <% include ../.././partials/admin/head %>
+</head>
+
+<body style="background-color:white;">
+    <header>
+        <% include ../.././partials/admin/header %>
+    </header>
+    <main>
+        <div class="container">
+            <h1>ADMIN PANEL - UPLOAD NYHED</h1>
+        </div>
+<!-- ALL ARRANGEMENT IMAGES -->
+        <div class="container">
+            <div>
+                <h4>Tittel</h4>
+                <input type="text" class="input_title" value="">
+                <h4>Date</h4>
+                <input type="text" class="input_date" value="">
+                <h4>Forfatter</h4>
+                <input type="text" class="input_author" value="">
+                <h4>Tekst</h4>
+                <input type="text" class="input_text" value="">
+                <br>         
+                <br>         
+                <button onclick="gem();">gem</button>
+            </div>
+            <% news.forEach(function(elm) { %>
+                <h4><%= elm.news_title %></h4>
+                <img src="/static/resources/pages/cultural_center/media/news/<%= elm.news_img %>" alt="<%= elm.news_img %>">
+                <p> Dato : <%= elm.news_date %></p>
+                <p> Forfatter : <%= elm.news_author %></p>
+                <p> Tekst : <%= elm.news_text %></p>
+                <p></p>
+                <form ref='uploadForm' id='uploadForm' action='/json/arrangement/create/news/upload_img/<%= elm.news_id %>' method='post'encType="multipart/form-data">
+                    <input type="file" name="sampleFile" />
+                    <input type='submit' value='Upload!' />
+                </form>
+                <form ref='uploadForm' id='uploadForm' action='/json/arrangement/create/news/delete_news/<%= elm.news_id %>' method='post'encType="multipart/form-data">
+                    <input type="submit" style="margin-top:20px; background-color:red; color:white;"value="SLET NYHED">
+                </form>
+            <% }) %>                    
+        </div>
+        
+
+
+
+
+    </main>
+    <footer>
+        <% include ../.././partials/admin/footer %>
+    </footer>
+</body>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src="/static/resources/pages/cultural_center/js/pages/admin/admin_create_news.js"></script>
+
+</html>

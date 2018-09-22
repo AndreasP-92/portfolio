@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <% include ../.././partials/danish/head %>
+</head>
+
+<body>
+    <!--************************************************ HEADER *****************************************-->
+    <header>
+
+        <!-- NAV -->
+
+        <% include ../.././partials/danish/nav %>
+
+        <!-- NAV END -->
+
+        <h2>Hajens Projekter</h2>
+    </header>
+    <!-- ************************************************* MAIN ***************************************** -->
+    <main class="projects">
+
+<!-- RESPONSIVE FLAGS -->
+
+<% include ../.././partials/danish/resp-flags %>
+
+<!-- RESPONSIVE FLAGS END -->
+
+    <div class="choosingProjects">
+            <a href="/projekter/ejs"> <button class="projectButtons"> <p> Show EJS Projects </p></button> </a>
+            <a href="/projekter/react"> <button class="projectButtons"><p> Show React Projects </p></button> </a>
+        
+        <!-- <button class="projectButtons"> <a href="/projects/react">  </a></button> -->
+    </div>
+    <% if(categoryCheck == ""){ %>
+
+        <div style="margin-bottom: 250px;"></div>
+
+    <% } else if(categoryCheck == "reactTrue"){ %>
+
+        <% include ../.././partials/danish/reactProjekter %>
+            
+
+    <% } else if(categoryCheck == "ejsTrue"){ %>
+
+        <% include ../.././partials/danish/ejsProjekter %>
+                
+    
+    <% } %>
+        </div> 
+
+    </main>
+    <!-- ************************************************* FOOTER ************************************************************* -->
+    <footer>
+            <% include ../.././partials/danish/footer %>
+    </footer>
+</body>
+<% include ../.././partials/sharedPartials/script %>
+<script src="./resources/js/skills.js"></script>
+
+</html>

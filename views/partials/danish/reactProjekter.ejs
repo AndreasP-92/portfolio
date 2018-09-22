@@ -1,0 +1,13 @@
+<div class="project_div">
+        <% reactProjectData.forEach(function(elm) { %>
+            <article>
+                <h3><%= elm.react_projects_dk_title %></h3>
+                <a href="<%= elm.react_projects_dk_link %>" target="_blank">
+                    <img src="/resources/media/image/projects/react/<%= elm.react_projects_dk_image %>" alt="">
+                </a>
+                <p class="bold"><%= elm.react_projects_dk_date %></p>
+                <p class="project_text_01"><%= elm.react_projects_dk_text01 %></p>
+                <p class="project_text_02"><%= elm.react_projects_dk_text02 %></p>
+                <p class="project_text_03"><%= elm.react_projects_dk_text03 %></p>
+            </article>
+        <% }); %>

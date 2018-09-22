@@ -1,5 +1,5 @@
-module.exports = function (app) {
-    app.get('/produkter/nav', function (reg, res) {
+module.exports = function (server) {
+    server.get('/produkter/nav', function (reg, res) {
 
         var image = [
             {

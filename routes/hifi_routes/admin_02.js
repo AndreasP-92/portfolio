@@ -3,10 +3,10 @@ const passwordHash = require('password-hash');
 const crypto = require('crypto');
 
 
-module.exports = function (app) {
+module.exports = function (server) {
 
 
-    app.get('/kategorier', function (req, res) {
+    server.get('/kategorier', function (req, res) {
         console.log('data læst')
         db.query('select * from fk_kategori', function (err, data) {
             console.log(data)
@@ -16,7 +16,7 @@ module.exports = function (app) {
 
     });
 
-    app.get('/kategorier/:id', function (req, res) {
+    server.get('/kategorier/:id', function (req, res) {
         console.log(req.params.id)
         db.query('select * from kategori where id = ?', req.params.id, function (err, data) {
             res.send(data);
@@ -24,14 +24,14 @@ module.exports = function (app) {
         db.end();
     });
 
-    app.get('/producenter', function (req, res) {
+    server.get('/producenter', function (req, res) {
         db.query('select * from producent', function (err, data) {
             res.send(data);
         })
         db.end();
     });
 
-    app.get('/produkter/kategori/:id', function (req, res) {
+    server.get('/produkter/kategori/:id', function (req, res) {
         // console.log(req.params.id)
         db.query('select * from produkter where fk_kategori = ?', req.params.id, function (err, data) {
             res.send(data);
@@ -39,7 +39,7 @@ module.exports = function (app) {
         db.end();
     });
 
-    app.get('/produkter/:id', function (req, res) {
+    server.get('/produkter/:id', function (req, res) {
         console.log(req.params.id)
         db.query('select * from produkter where id = ?', req.params.id, function (err, data) {
             res.send(data);
@@ -48,7 +48,7 @@ module.exports = function (app) {
         db.end();
     });
 
-    app.put('/produkter/:id', (req, res, next) => {
+    server.put('/produkter/:id', (req, res, next) => {
 
         let navn = (req.body.navn == undefined ? '' : req.body.navn);
         let varenr = (req.body.varenr == undefined ? '' : req.body.varenr);
@@ -79,7 +79,7 @@ module.exports = function (app) {
         db.end();
     });
 
-    app.get('/produkter/search/:id', function (req, res) {
+    server.get('/produkter/search/:id', function (req, res) {
         console.log(req.params.id)
         db.query(`select * from produkter where fk_navn like "%"?"%"`, req.params.id, function (err, data) {
             res.send(data);
@@ -87,7 +87,7 @@ module.exports = function (app) {
         db.end();
     });
 
-    app.post('/produkt', (req, res, next) => {
+    server.post('/produkt', (req, res, next) => {
 
         let values = [];
         values.push(req.body.navn);
@@ -114,7 +114,7 @@ module.exports = function (app) {
         db.end();
     });
 
-    app.delete('/produkt/:id', (req, res, next) => {
+    server.delete('/produkt/:id', (req, res, next) => {
         let id = (isNaN(req.params.id) ? 0 : req.params.id);
         if (id > 0) {
 

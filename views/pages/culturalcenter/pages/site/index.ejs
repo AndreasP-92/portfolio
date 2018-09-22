@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../.././partials/site/head %>
+</head>
+
+<body style="background-color:white;">
+    <header>
+        <% include ../.././partials/site/nav %>
+    </header>
+    <main>
+
+        <!-- =============================== SLIDE START =============================== -->
+        <div id="content-slider" class="clr">
+            <div class="wrap-slider clr">
+                <h1 class="main-title">Kultur Huset</h1>
+
+                <!-- 	========================Thumbnail ControlNav======================================    -->
+                <input type="radio" id="a-1" name="a">
+                <input type="radio" id="a-2" name="a">
+                <input type="radio" id="a-3" name="a">
+                <input type="radio" id="a-4" name="a">
+
+                <nav id="main">
+                    <label for="a-1" class="first"></label>
+                    <label for="a-2" class="first"></label>
+                    <label for="a-3" class="first"></label>
+                    <label for="a-4" class="first"></label>
+                    <!-- <label for="a-5" class="first"></label> -->
+                </nav>
+                <!-- 	==============================================================    -->
+                <nav id="control">
+                    <label for="a-1"></label>
+                    <label for="a-2"></label>
+                    <label for="a-3"></label>
+                    <label for="a-4"></label>
+                    <!-- <label for="a-5" class="first"></label> -->
+                </nav>
+                <!-- 	==============================================================    -->
+
+                <!-- 	SMALL IMAGE NAVIGATION pic -->
+
+                <% gallery.forEach(function(elm) { %>
+                    <span id="b-<%= elm.mainGallery_id %>" class="th" tabindex="10">
+                        <img src="/static/resources/pages/cultural_center/media/index/<%= elm.mainGallery_path %>" alt="" id="p-<%= elm.mainGallery_id %>">
+                        <div class="title-<%= elm.mainGallery_id %>">
+                            <h1>
+                                <%= elm.mainGallery_title %>
+                            </h1>
+                            <p>
+                                <%= elm.mainGallery_text %>
+                            </p>
+                            <a href="#">Læs Mere...</a>
+                        </div>
+                    </span>
+                    <% }); %>
+
+                        <!-- ______________BIG IMAGES_________________________________________ -->
+
+                        <div class="slider">
+                            <div class="inset">
+                                <% gallery.forEach(function(elm) { %>
+                                    <span>
+                                        <figure>
+                                            <figcaption class="title-<%= elm.mainGallery_id %>">
+                                                <h1>
+                                                    <%= elm.mainGallery_title %>
+                                                </h1>
+                                                <p>
+                                                    <%= elm.mainGallery_text %>
+                                                </p>
+                                                <a href="">Læs Mere...</a>
+                                            </figcaption>
+                                            <img src="/static/resources/pages/cultural_center/media/index/<%= elm.mainGallery_path %>" alt="" id="i-<%= elm.mainGallery_id %>" class="f">
+                                        </figure>
+
+                                    </span>
+                                    <% }); %>
+
+                                        <!-- LAST PICTURE  -->
+                                        <figure>
+                                            <figcaption class="title-5">
+                                                <h1>
+                                                    <%= gallery[0].mainGallery_title %>
+                                                </h1>
+                                                <p>
+                                                    <%= gallery[0].mainGallery_text %>/p>
+                                                        <a href="">Læs Mere...</a>
+                                            </figcaption>
+                                            <img src="/static/resources/pages/cultural_center/media/index/<%= gallery[0].mainGallery_path %>" alt="" id="i-5" class="f">
+                                        </figure>
+                            </div>
+                        </div>
+
+            </div>
+            <div class="container">
+            <% arrangements.forEach(function(elm) { %>
+                <%= elm.arrangement_title %>
+                    <div class="categoryItem">
+                        <h2 class="categoryTitle">
+                            <%= elm.arrangement_title %>
+                        </h2>
+                        <img src="/static/resources/pages/cultural_center/media/aktiviteter/<%= elm.arrangement_imgPath %>" alt="" class="categoryImg">
+                        <p class="categoryText">
+                            <%= elm.arrangement_text %>
+                        </p>
+                        <p class="categoryAdress">
+                            Adresse:
+                            <%= elm.adress_name %>
+                        </p>
+                        <p class="categoryBuilding">
+                            Bygning Nummer:
+                            <%= elm.building_number %>
+                        </p>
+                        <p class="date">Start Dato:
+                            <%= elm.arrangement_dateStart %>
+                        </p>
+                        <p class="date">Slut Dato:
+                            <%= elm.arrangement_dateEnd %>
+                        </p>
+                        <p class="price">
+                            Pris:
+                            <%= elm.arrangement_price %>
+                        </p>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+        <!-- =============================== SLIDE END =============================== -->
+
+    </main>
+    <footer>
+        <script src=""></script>
+    </footer>
+</body>
+<% include ../.././partials/site/script %>
+
+</html>

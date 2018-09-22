@@ -1,0 +1,32 @@
+<div class='container'>
+
+    <% category.forEach(function(elm) { %>
+
+        <% if(elm.category_id != 7 ){ %>
+
+            
+            <div class='product'>
+                <img src='/static/resources/pages/cultural_center/media/aktiviteter/<%= elm.category_img %>'>
+                <h2 class='header'>
+                    <%= elm.category_title %>
+                </h2>
+                <p class='description'></p>
+                <a href="/culturalcenter/aktiviteter/<%= elm.category_link %>" class="order">Se alle</a>
+                <!-- <div class='btn'>Add to cart</div> -->
+                <div class='quickview'>Quickview</div>
+            </div>
+
+        <% } %>
+
+    <% }); %>
+
+
+</div>
+<div class='quickviewContainer'>
+    <div class='close'></div>
+    <h2 class='headline'></h2>
+    <p class='description'></p>
+    <img src='https://placeimg.com/100/100'>
+    <img src='https://placeimg.com/100/100'>
+    <img src='https://placeimg.com/100/100'>
+</div>

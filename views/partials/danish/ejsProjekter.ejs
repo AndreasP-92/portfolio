@@ -1,0 +1,14 @@
+<div class="project_div">
+        <% projectData.forEach(function(elm) { %>
+            <article>
+                <h3><%= elm.project_title %></h3>
+                <a href="<%= elm.project_link %>" target="_blank">
+                    <img src="/resources/media/image/projects/<%= elm.project_image %>" alt="">
+                </a>
+                <p class="bold"><%= elm.project_date %></p>
+                <p class="project_text_01"><%= elm.project_text_01 %></p>
+                <p class="project_text_02"><%= elm.project_text_02 %></p>
+                <p class="project_text_03"><%= elm.project_text_03 %></p>
+                
+            </article>
+        <% }); %>

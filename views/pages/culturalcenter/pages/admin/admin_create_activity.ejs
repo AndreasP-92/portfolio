@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../.././partials/admin/head %>
+</head>
+
+<body style="background-color:white;">
+    <header>
+        <% include ../.././partials/admin/header %>
+    </header>
+    <main>
+        <h1>ADMIN PANEL</h1>
+        <div class='container'>
+            <div class="container">
+                <h2>Indsæt Arrangement</h2>
+<!-- TITTEL ==================================================== -->
+                <h4>Tittel</h4>
+                <input type="text" class="input_title" value="">
+<!-- TEKST ===================================================== -->
+                <h4>Tekst</h4>
+                <textarea name="text" class="input_text" cols="30" rows="5"></textarea>
+<!-- ADRESSE =================================================== -->
+                <h4>Adresse</h4>
+                <select name="" class="input_adress">
+
+                    <% adressData.forEach(function(element) { %>
+                        <option value="<%= element.adress_id %>">
+                            <%= element.adress_name %>
+                        </option>
+
+                        <% }) %>
+                </select>
+<!-- BYGNINGS NUMMER =========================================== -->
+                <h4>Bygnings Nummer</h4>
+                <p>
+                    <%= buildingData[0].building_id %>
+                </p>
+                <select name="" class="input_buildingNo">
+                    <% buildingData.forEach(function(building_elm) { %>
+
+                        <option value="<%= building_elm.building_id %>">
+                            <%= building_elm.building_number %>
+                        </option>
+
+                        <% }) %>
+
+                </select>
+<!-- EVENT START ============================================== -->
+                <h4>Event Start</h4>
+                <p class="date">
+                    Indsæt dd-mm-åååå
+                </p>
+                <input type="text" class="input_dateStart" value="">
+<!-- EVENT SLUT =============================================== -->
+                <h4>Event Slut</h4>
+                <p class="date">
+                    Indsæt dd-mm-åååå
+                </p>
+                <input type="text" class="input_dateEnd" value="">
+<!-- PRIS ===================================================== -->
+                <h4>Pris</h4>
+                <input type="text" class="input_price" value="">
+<!-- VIS/SKJUL ================================================ -->
+                <h4>Vis = 1 | Skjul = 0</h4>
+                <input type="text" class="input_show" value="">
+<!-- KATEGORI SKIFT ELLER SLET ================================ -->
+                <h4>Skift Kategori eller Slet Arrangement</h4>
+                <select name="" class="input_category">
+
+                    <% CategoryData.forEach(function(category_elm) { %>
+
+                        <option value="<%= category_elm.category_id %>">
+                            <%= category_elm.category_title %>
+                        </option>
+
+                        <% }) %>
+
+                </select>
+
+                <button onclick="gem();">gem</button>
+
+            </div>
+            <div class='quickviewContainer'>
+                <div class='close'></div>
+                <h2 class='headline'></h2>
+                <p class='description'></p>
+                <img src='https://placeimg.com/100/100'>
+                <img src='https://placeimg.com/100/100'>
+                <img src='https://placeimg.com/100/100'>
+            </div>
+
+
+    </main>
+    <footer>
+        <% include ../.././partials/admin/footer %>
+    </footer>
+</body>
+<script src="/static/resources/pages/cultural_center/js/pages/admin/admin_create_activity.js"></script>
+
+</html>

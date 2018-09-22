@@ -1,6 +1,6 @@
-module.exports = (app) => {
-    require('./produkt')(app);
-    // require('./admin')(app);
-    require('./login')(app);
-    require('./admin_02')(app);
+module.exports = (server) => {
+    require('./produkt')(server);
+    // require('./admin')(server);
+    require('./login')(server);
+    require('./admin_02')(server);
 };

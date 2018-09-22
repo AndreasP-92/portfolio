@@ -2,9 +2,9 @@ const db = require('../../config/sql').connect();
 const passwordHash = require('password-hash');
 const crypto = require('crypto');
 
-module.exports = function (app) {
+module.exports = function (server) {
     // PRODUKT LISTE
-//   app.get('/admin/produkt', function (req, res) {
+//   server.get('/admin/produkt', function (req, res) {
 //     db.query('SELECT * FROM produkt', function (err, rows) {
 //         if (err) {
 //             console.log(err);
@@ -13,7 +13,7 @@ module.exports = function (app) {
 //         }
 //     })
 // });
-    app.get('/produkt', function (req, res) {
+    server.get('/produkt', function (req, res) {
         db.query('SELECT * FROM produkt', function (err, rows) {
             if (err) {
                 console.log(err);
@@ -23,13 +23,13 @@ module.exports = function (app) {
             // db.end();
         })
     }),
-        app.get('/produkt_fors', function (req, res) {
+        server.get('/produkt_fors', function (req, res) {
             db.query('SELECT * FROM produkt WHERE fk_kategori = 3', function (err, data) {
                 res.send(data);
             })
             // db.end();
         })
-    app.get('/produkt_hojt', function (req, res) {
+    server.get('/produkt_hojt', function (req, res) {
         db.query('SELECT * FROM produkt WHERE fk_kategori = 2', function (err, data) {
             res.send(data);
         })
@@ -37,7 +37,7 @@ module.exports = function (app) {
     });
     // Index
 
-    app.get('/produkt_news', function (req, res) {
+    server.get('/produkt_news', function (req, res) {
         db.query('SELECT * FROM produkt order by id desc limit 3', function (err, data) {
             res.send(data);
         })
@@ -46,12 +46,12 @@ module.exports = function (app) {
 
     // SEARCH ENGINE
 
-    app.get('/produkt_ny', function (req, res) {
+    server.get('/produkt_ny', function (req, res) {
         db.query('SELECT * from produkt WHERE fk_kategori order by id')
         res.send(data);
         // db.end();
     });
-    app.get('/produkt_search/:key', function (req, res) {
+    server.get('/produkt_search/:key', function (req, res) {
         db.query(`SELECT * from produkt where fk_navn like '%${req.params.key}%'`, function (err, rows, fields) {
             // if (err) throw err;
             // var data = [];
@@ -67,7 +67,7 @@ module.exports = function (app) {
 
 
 
-    app.post('/kontakt_create', function (req, res) {
+    server.post('/kontakt_create', function (req, res) {
         var navn = req.body.navn;
         var mail = req.body.mail;
         var besked = req.body.besked;
@@ -83,7 +83,7 @@ module.exports = function (app) {
 
     // INDSÆTTELSES FORM
 
-    app.post('/produkt_insert', function (req, res) {
+    server.post('/produkt_insert', function (req, res) {
 
         var navn = req.body.navn;
         var varenr = req.body.varenr
@@ -103,14 +103,14 @@ module.exports = function (app) {
         // db.end();
     });
     // PRODUKT UNDER SIDE
-    // app.get('/produkt/:id', function (req, res) {
+    // server.get('/produkt/:id', function (req, res) {
     //     db.query(`SELECT * FROM produkt WHERE id = ${req.params.id}`, function (err, rows, fields) {
     //         res.end(JSON.stringify(rows));
     //     })
     // });
 
     // ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN
-    app.get('/produkt/:id', (req, res, next) => {
+    server.get('/produkt/:id', (req, res, next) => {
         let id = (isNaN(req.params.id) ? 0 : req.params.id);
         if (id > 0) {
             //    let db = mysql.connect();
@@ -130,7 +130,7 @@ module.exports = function (app) {
     });
     //    INSERT PRODUKT
 
-    app.post('/produkt', (req, res, next) => {
+    server.post('/produkt', (req, res, next) => {
 
         let fk_navn = (req.body.fk__navn == undefined ? '' : req.body.fk_navn);
         let beskrivelse = (req.body.beskrivelse == undefined ? '' : req.body.description);
@@ -157,7 +157,7 @@ module.exports = function (app) {
 
     //OPDATER PRODUKT
 
-    app.put('/produkt/opdater', (req, res, next) => {
+    server.put('/produkt/opdater', (req, res, next) => {
         console.log(req.body)
         let fk_navn = (req.body.fk_navn == undefined ? '' : req.body.fk_navn);
         let beskrivelse = (req.body.beskrivelse == undefined ? '' : req.body.beskrivelse);

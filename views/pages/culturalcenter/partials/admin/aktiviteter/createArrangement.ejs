@@ -1,0 +1,86 @@
+<div class='container'>
+
+        <div class="container">
+                <h2>Indsæt Arrangement</h2>
+                <h4>Tittel</h4>
+                <input type="text" class="input_title_<%= arrangementData.arrangement_id %>" value="">
+                <h4>Billede</h4>
+                <input type="text" class="input_img_<%= arrangementData.arrangement_id %>" value="">
+                <h4>Tekst</h4>
+                <textarea name="text" class="input_text_<%= arrangementData.arrangement_id %>" cols="30" rows="5"></textarea>
+                <h4>Adresse</h4>
+                <select name="" class="input_adress_<%= arrangementData.arrangement_id %>" >
+                                
+                        <% adressData.forEach(function(element) { %>
+        
+                            <option value="<%= adressData.adress_id %>" 
+                                <% if(element.adress_id == arrangementData.fk_adress){ %>
+                                    <%= selected="selected" %>                                                 
+                                <% } %> >
+                                <%= element.adress_name %>           
+                            </option>
+        
+                            <% }) %>
+                </select>
+        <!-- BYGNINGS NUMMER -->
+                <h4>Bygnings Nummer</h4>
+                <select name="" class="input_buildingNo_<%= elm.arrangement_id %>">
+                
+                        <% buildingData.forEach(function(building_elm) { %>
+        
+                            <option value="<%= building_elm.building_id %>" 
+                                <% if(building_elm.building_id == elm.fk_buildingNo){ %>
+                                    <%= selected="selected" %>                                                 
+                                <% } %> >
+                                <%= building_elm.building_number %>           
+                            </option>
+        
+                        <% }) %>
+        
+                </select>
+        <!-- EVENT START -->
+                <h4>Event Start</h4>
+                <p class="date">
+                    <%= elm.arrangement_dateStart %>
+                </p>
+                <input type="text" class="input_dateStart_<%= elm.arrangement_id %>" value="<%= elm.arrangement_dateStart %>">
+        <!-- EVENT SLUT -->
+                <h4>Event Slut</h4>
+                <p class="date">
+                    <%= elm.arrangement_dateEnd %>
+                </p>
+                <input type="text" class="input_dateEnd_<%= elm.arrangement_id %>" value="<%= elm.arrangement_dateEnd %>">
+        <!-- PRIS -->
+                <h4>Pris</h4>
+                <input type="text" class="input_price_<%= elm.arrangement_id %>" value="<%= elm.arrangement_price %>">
+        <!-- VIS/SKJUL -->
+                <h4>Vis = 1 | Skjul = 0</h4>
+                <input type="text" class="input_show_<%= elm.arrangement_id %>" value="<%= elm.arrangement_hide %>">
+        <!-- KATEGORI SKIFT -->
+                <h4>Skift Kategori eller Slet Arrangement</h4>
+                <select name="" class="input_category_<%= elm.arrangement_id %>">
+        
+                    <% allCategoryData.forEach(function(category_elm) { %>
+        
+                        <option value="<%= category_elm.category_id %>" 
+                            <% if(category_elm.category_id == elm.fk_type_id){ %>
+                                <%= selected="selected" %>                                                 
+                            <% } %> >
+                            <%= category_elm.category_title %>           
+                        </option>
+        
+                    <% }) %>
+        
+                </select>   
+        
+            <button onclick="gem('<%= elm.arrangement_id %>');">gem</button>
+
+</div>
+<div class='quickviewContainer'>
+    <div class='close'></div>
+    <h2 class='headline'></h2>
+    <p class='description'></p>
+    <img src='https://placeimg.com/100/100'>
+    <img src='https://placeimg.com/100/100'>
+    <img src='https://placeimg.com/100/100'>
+</div>

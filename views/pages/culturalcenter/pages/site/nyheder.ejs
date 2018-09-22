@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../.././partials/site/head %>
+</head>
+
+<body>
+    <header>
+        <% include ../.././partials/site/nav %>
+    </header>
+    <main>
+        <div class="container">
+            <% news.forEach(function(elm) { %>
+                <h4><%= elm.news_title %></h4>
+                <img src="/static/resources/pages/cultural_center/media/news/<%= elm.news_img %>" alt="<%= elm.news_img %>">
+                <p> Dato : <%= elm.news_date %></p>
+                <p> Forfatter : <%= elm.news_author %></p>
+                <p> <%= elm.news_text %></p>
+                <p></p>
+            <% }) %>         
+        </div>
+    </main>
+    <footer>
+        <script src="/static/resources/pages/cultural_center/js/pages/index.js"></script>
+    </footer>
+</body>
+
+</html>

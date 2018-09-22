@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <% include ../.././partials/english/en-head %>
+</head>
+
+<body>
+    <!--************************************************ HEADER *****************************************-->
+    <header>
+ 
+        <!-- NAV -->
+
+        <% include ../.././partials/english/nav %>
+
+        <!-- NAV END -->
+
+        <h2 id="h2_en"> The Web Shark Andreas</h2>
+        </header>
+    <!-- ************************************************* MAIN ***************************************** -->
+    <main class="projects">
+
+<!-- RESPONSIVE FLAGS -->
+
+<% include ../.././partials/english/resp-flags %>
+
+<!-- RESPONSIVE FLAGS END -->
+
+    <div class="choosingProjects">
+            <a href="/projects/ejs"> <button class="projectButtons"> <p> Show EJS Projects </p></button> </a>
+            <a href="/projects/react"> <button class="projectButtons"><p> Show React Projects </p></button> </a>
+        
+        <!-- <button class="projectButtons"> <a href="/projects/react">  </a></button> -->
+    </div>
+    <% if(categoryCheck == ""){ %>
+
+        <div class="projectSpace" style="margin-bottom: 250px;"></div>
+
+    <% } else if(categoryCheck == "reactTrue"){ %>
+
+        <% include ../.././partials/english/reactProjects %>
+            
+
+    <% } else if(categoryCheck == "ejsTrue"){ %>
+
+        <% include ../.././partials/english/projects %>
+                
+    
+    <% } %>
+        
+
+
+    </div>         
+
+    </main>
+    <!-- ************************************************* FOOTER ************************************************************* -->
+    <footer>
+            <% include ../.././partials/english/footer %>
+    </footer>
+</body>
+<script src="/static/resources/js/skills.js"></script>
+<% include ../.././partials/sharedPartials/script %>
+</html>
