@@ -1,15 +1,19 @@
 import React                from 'react';
-import { Switch, Route }    from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import Index from '../index/index'
 import WeatherApp  from '../weatherApp/weatherApp'
 import CalculaterApp from '../calculater/calculaterApp'
 
 
 const Main = () =>(
-  <Switch>
-    <Route path="/weatherapp" component   ={WeatherApp} />
-    <Route path="/calculator" component   ={CalculaterApp} />
-  </Switch>
+  <Router>
+    <Switch>
+      <Route exact path="/" component             ={Index} />
+      <Route path="/weatherapp" component         ={WeatherApp} />
+      <Route path="/calculator" component         ={CalculaterApp} />
+    </Switch>
+  </Router>
 )
 
 export default Main;
