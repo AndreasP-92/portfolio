@@ -5,16 +5,17 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Index from './components/index/index'
 import WeatherApp  from './components/weatherApp/weatherApp'
 import CalculatorApp from './components/calculater/calculaterApp'
+{/* <BrowserRouter basename="/react"/> */}
 
 class App extends React.Component{
 
   render(){
       return(
-      <Router>
+      <Router basename="/react">
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/reacthome">Home</Link>
           </li>
           <li>
             <Link to="/weatherapp">Weather App</Link>
@@ -25,8 +26,7 @@ class App extends React.Component{
         </ul>
 
         <hr />
-
-        <Route exact path="/" component={Home} />
+        <Route exact path="/react" component={Home} />
         <Route path="/weatherapp" component={weatherAppRoute} />
         <Route path="/calculator" component={calculatorAppRoute} />
       </div>
