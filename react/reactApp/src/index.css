@@ -3,8 +3,59 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+/* ************************************************************** MAIN HEADER ************************************************* */
+
+.mainNav ul:after{
+  content:"";
+  display: table;
+  clear:both;
+}
+.mainNav{
+height: 55px;
+padding-top:15px;
+-webkit-box-shadow: 0px 4px 5px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 4px 5px 2px rgba(0,0,0,0.75);
+box-shadow: 0px 4px 5px 2px rgba(0,0,0,0.75);
+background-color:white!important;
+}
+.mainNav:after{
+content:"";
+display: table;
+clear: both;
+}
+.mainNav ul{
+float: left;
+width:480px;
+margin:5px;
+list-style-type:none;
+
+}
+.mainNav ul:after{
+content:"";
+display: table;
+clear: both;
+}
+.mainNav ul li{
+float: left;
+width:21%;
+text-align: center;
+}
+.mainNav ul > li:hover{
+border-bottom:2px solid #F5C453;
+border-radius:18px;
+}
+.mainNav ul li a{
+text-decoration: none;
+color:#454545;
+width:100%;
+display:block;
+margin-top: 5px;
+height:25px;
+
+}
 
 /* ************************************************************** HEADER ************************************************* */
+
 
 nav{
   border-radius: 0px!important;

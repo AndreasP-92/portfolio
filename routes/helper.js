@@ -6,11 +6,13 @@ module.exports = (server) => {
     // PAGES DANISH ROUTES
 
     require('./pages_routes/pages_danish_routes/ejsProjects.js')(server)
+    require('./pages_routes/pages_danish_routes/ongoingProjects.js')(server)
     require('./pages_routes/pages_danish_routes/reactProjects.js')(server)
 
     // PAGES ENGLISH ROUTES
 
     require('./pages_routes/pages_english_routes/ejsProjects.js')(server)
+    require('./pages_routes/pages_english_routes/ongoingProjects.js')(server)
     require('./pages_routes/pages_english_routes/reactProjects.js')(server)
 
     // PAGES ADMIN ROUTES

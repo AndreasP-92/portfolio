@@ -2,12 +2,15 @@
     <% reactProjectData.forEach(function(elm) { %>
         <article>
             <h3><%= elm.react_projects_en_title %></h3>
-            <a href="<%= elm.react_projects_en_link %>" target="_blank">
+            <!-- <a href="<%= elm.react_projects_en_link %>" target="_blank"> -->
                 <img src="/resources/media/image/projects/react/<%= elm.react_projects_en_image %>" alt="">
-            </a>
+            <!-- </a> -->
             <p class="bold"><%= elm.react_projects_en_date %></p>
             <p class="project_text_01"><%= elm.react_projects_en_text01 %></p>
             <p class="project_text_02"><%= elm.react_projects_en_text02 %></p>
             <p class="project_text_03"><%= elm.react_projects_en_text03 %></p>
+            <div class="choosingProjects">
+                <a href="/react"> <button class="projectButtons reactButton"> <p>Show React Projects</p></button> </a>
+            </div>
         </article>
     <% }); %>

@@ -29,6 +29,7 @@
     <div class="choosingProjects">
             <a href="/projects/ejs"> <button class="projectButtons"> <p> Show EJS Projects </p></button> </a>
             <a href="/projects/react"> <button class="projectButtons"><p> Show React Projects </p></button> </a>
+            <a href="/projects/ongoing"> <button class="projectButtons"><p> Show ongoing Projects </p></button> </a>
         
         <!-- <button class="projectButtons"> <a href="/projects/react">  </a></button> -->
     </div>
@@ -44,6 +45,10 @@
     <% } else if(categoryCheck == "ejsTrue"){ %>
 
         <% include ../.././partials/english/projects %>
+
+    <% } else if(categoryCheck == "ongoingTrue"){ %>
+
+        <% include ../.././partials/english/ongoingProjects %>
                 
     
     <% } %>

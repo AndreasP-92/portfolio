@@ -29,6 +29,7 @@
     <div class="choosingProjects">
             <a href="/projekter/ejs"> <button class="projectButtons"> <p> Show EJS Projects </p></button> </a>
             <a href="/projekter/react"> <button class="projectButtons"><p> Show React Projects </p></button> </a>
+            <a href="/projekter/ongoing"> <button class="projectButtons"><p> Kommende Projekter </p></button> </a>
         
         <!-- <button class="projectButtons"> <a href="/projects/react">  </a></button> -->
     </div>
@@ -38,13 +39,20 @@
 
     <% } else if(categoryCheck == "reactTrue"){ %>
 
+        <!-- <div class="choosingProjects">
+            <a href="/react"> <button class="projectButtons"> <p> Redirect til React Projekter </p></button> </a>
+        </div> -->
+
         <% include ../.././partials/danish/reactProjekter %>
             
 
     <% } else if(categoryCheck == "ejsTrue"){ %>
 
         <% include ../.././partials/danish/ejsProjekter %>
-                
+
+    <% } else if(categoryCheck == "ongoingTrue"){ %>
+
+        <% include ../.././partials/danish/ongoingProjekter %>
     
     <% } %>
         </div> 

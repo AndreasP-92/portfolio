@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Index from './components/index/index'
 import WeatherApp  from './components/weatherApp/weatherApp'
 import CalculatorApp from './components/calculater/calculaterApp'
-{/* <BrowserRouter basename="/react"/> */}
+
 
 class App extends React.Component{
 
@@ -13,22 +13,22 @@ class App extends React.Component{
       return(
       <Router>
       <div>
-        <ul>
-          <li>
-            <Link to="/reacthome">Home</Link>
-          </li>
-          <li>
-            <Link to="/weatherapp">Weather App</Link>
-          </li>
-          <li>
-            <Link to="/calculator">Calculator</Link>
-          </li>
-        </ul>
-
+        <nav className="mainNav">
+          <ul>
+            <li>
+              <a href="https://mrcaptain.info">Home</a>
+            </li>
+            <li>
+              <Link to="/react/weatherapp">Weather App</Link>
+            </li>
+            <li>
+              <Link to="/react/calculator">Calculator</Link>
+            </li>
+          </ul>
+        </nav>
         <hr />
-        <Route exact path="/react" component={Home} />
-        <Route path="/weatherapp" component={weatherAppRoute} />
-        <Route path="/calculator" component={calculatorAppRoute} />
+        <Route path="/react/weatherapp" component={weatherAppRoute} />
+        <Route path="/react/calculator" component={calculatorAppRoute} />
       </div>
     </Router>
     )

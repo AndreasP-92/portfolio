@@ -499,7 +499,7 @@ main p{
     border-top:1px solid grey;
 }
 .choosingProjects{
-    width:40%;
+    width:57%;
     display:block;
     margin:auto;
     margin-bottom:100px;
@@ -521,6 +521,12 @@ main p{
 }
 .projectButtons p{
     border-bottom: 1px solid black;
+}
+.reactButton{
+    height:100%;
+}
+.reactButton p{
+    border:none;
 }
 .project_div{
         padding-bottom:50px; 

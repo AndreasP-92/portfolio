@@ -1,0 +1,14 @@
+<div class="project_div">
+    <% projectData.forEach(function(elm) { %>
+        <article>
+            <h3><%= elm.ongoing_title %></h3>
+            <!-- <a href="<%= elm.ongoing_link %>" target="_blank"> -->
+                <img src="/resources/media/image/projects/ongoingProjects/<%= elm.ongoing_image %>" alt="">
+            <!-- </a> -->
+            <p class="bold"><%= elm.ongoing_date %></p>
+            <p class="ongoing_text_01"><%= elm.ongoing_text01 %></p>
+            <p class="ongoing_text_02"><%= elm.ongoing_text02 %></p>
+            <p class="ongoing_text_03"><%= elm.ongoing_text03 %></p>
+            
+        </article>
+    <% }); %>
