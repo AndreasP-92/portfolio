@@ -11,7 +11,7 @@ class App extends React.Component{
 
   render(){
       return(
-      <Router basename="/react">
+      <Router>
       <div>
         <ul>
           <li>
