@@ -2,7 +2,7 @@ module.exports = function (server) {
 
     // **************************************************** ADMIN SITE ************************************************************
 
-    server.get('/admin/', function (req, res) {
+    server.get('/authenticate/admin/', function (req, res) {
 // REQUIRE LOGIN ==============================================
         var user = req.session.user;
 		var userId = req.session.userId;

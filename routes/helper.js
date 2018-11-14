@@ -19,7 +19,7 @@ module.exports = (server) => {
 
     require('./pages_routes/pages_admin_routes/admin_upload_project.js')(server)
     // require('./pages_routes/pages_admin_routes/admin_index.js')(server)
-    require('./pages_routes/pages_login_routes/login.js')(server)
+    // require('./pages_routes/pages_login_routes/login.js')(server)
 
     //********************************************************** SLIPSEKNUDEN ****************************************
     require('./slipseknuden_routes/index.js')(server)
