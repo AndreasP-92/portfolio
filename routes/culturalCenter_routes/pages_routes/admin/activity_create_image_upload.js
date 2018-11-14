@@ -3,6 +3,7 @@ const getAll    = require('../../services/getAll');
 
 module.exports = function (server) {
 
+// IMAGE UPLOADE ======================
     server.get('/culturalcenter/admin/image_upload', async function(req,res){
         try{
             const arrangementData = await getAll.getAlltb_arrangements_DESC();
@@ -16,13 +17,13 @@ module.exports = function (server) {
     server.post('/json/arrangement/create/activity/upload_img/:id', function(req, res) {
         if (!req.files)
             return res.status(400).send('No files were uploaded.');
-// NAMING PARAMS ===============================================================
+// NAMING PARAMS ------------------------------------------
         let sampleFile  = req.files.sampleFile,
             sampleId    = req.params.id;
         console.log('IMAGE NAME : ',sampleId)
-// FILE PATH ( SERVER SITE ) ===================================================
+// FILE PATH ( SERVER SITE ) ------------
         sampleFile.mv(`public/resourcess/pages/cultural_center/media/aktiviteter/${sampleFile.name}`, function(err) {
-// SQL CALL ====================================================================
+// SQL CALL ----------------
             sql_update_image = `
             UPDATE
             tb_arrangements

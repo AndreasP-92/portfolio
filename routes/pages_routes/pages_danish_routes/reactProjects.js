@@ -4,7 +4,7 @@ module.exports = function (server){
 
     var categoryCheck = ""
 
-
+// SHOW REACT PROJECTS ====================
     server.get('/projekter/react',function (req, res) {
         var categoryCheck = "reactTrue"
         

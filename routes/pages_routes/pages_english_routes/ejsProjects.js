@@ -2,6 +2,9 @@ const db = require('../../../config/sql.js').connect_main();
 
 var categoryCheck = ""
 module.exports = function (server){
+    
+// SHOW EJS PROJECTS =================
+
     server.get('/projects/ejs',function (req, res) {    
         categoryCheck = "ejsTrue"
 

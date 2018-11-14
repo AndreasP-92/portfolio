@@ -2,6 +2,9 @@ const db = require('../../../config/sql.js').connect_main();
 
 var categoryCheck = ""
 module.exports = function (server){
+
+// SHOW REACT PROJECTS =================
+
     server.get('/projects/react',function (req, res) {    
         categoryCheck = "reactTrue"
 

@@ -6,6 +6,7 @@ const getSpecific   = require('../../services/getSpecific');
 var test;
 var category_test
 module.exports = function (server) {
+// SHOW ARRANGEMENT CATEGORIES ===============
     server.get('/culturalcenter/aktiviteter', async function(req,res){
         category_test = false;        
         try{
@@ -21,6 +22,7 @@ module.exports = function (server) {
         }
 
     })
+// SHOW ARRANGEMENT PER CATEGORY ================
     server.get('/culturalcenter/aktiviteter/:aktivitet',async function(req,res){
         let name = req.params.aktivitet;
         category_test = true
@@ -46,7 +48,7 @@ module.exports = function (server) {
         }
     })
 
-
+// POST RATING =============================
         server.post('/JSON/activity/rating/:id', async function(req,res){
             let rating_id   = req.params.id,
                 rating_star = req.body.rating;

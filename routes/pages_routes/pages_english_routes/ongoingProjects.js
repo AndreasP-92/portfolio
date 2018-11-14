@@ -2,6 +2,9 @@ const db = require('../../../config/sql.js').connect_main();
 
 var categoryCheck = ""
 module.exports = function (server){
+
+    // SHOW ONGOING PROJECTS =================
+
     server.get('/projects/ongoing',function (req, res) {    
         categoryCheck = "ongoingTrue"
 

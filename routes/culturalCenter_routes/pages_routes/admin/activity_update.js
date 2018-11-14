@@ -4,6 +4,7 @@ const getAll        = require('../../services/getAll');
 
 module.exports = function (server) {
     var all;
+
     server.get('/culturalcenter/admin/activity', function (req, res) {
         all = false;
         res.render('pages/culturalcenter/pages/admin/admin_activity',{
@@ -31,7 +32,7 @@ module.exports = function (server) {
             console.log(e)
         }
     }),
-    
+// UPDATE ARRANGEMENT =========================
     server.put('/json/arrangement/update/:id',function(req,res, next){
         let arrangement_id          = req.params.id,
             arrangement_category    = req.body.arrangement_category,

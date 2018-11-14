@@ -5,6 +5,7 @@ const appPost       = require('../../services/post');
 
 module.exports = function (server) {
 
+// CREATE ARRANGEMENT ===============================
     server.get('/culturalcenter/admin/opret', async function(req,res){
         try{
             const adressData        = await getAll.getAlltb_adress();

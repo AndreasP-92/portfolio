@@ -3,7 +3,7 @@ const db = require('../../../config/sql.js').connect_main();
 module.exports = function (server){
 
     var categoryCheck = ""    
-
+// SHOW EJS PROJECTS =================
     server.get('/projekter/ejs',function (req, res) {
 
         var categoryCheck = "ejsTrue"        
@@ -16,8 +16,6 @@ module.exports = function (server){
         ORDER BY
           project_id DESC`
         db.query(get_all_projects, function(err, projectData){
-            // console.log(projectData)
-            // res.send(projectData)
             res.render('pages/danish/projekter.ejs',{
                 projectData : projectData,
                 categoryCheck : categoryCheck

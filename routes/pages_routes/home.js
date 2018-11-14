@@ -36,6 +36,9 @@ module.exports = function (server) {
 
     server.get('/',
         function (req, res) {
+            var ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
+            console.log(ip)
+
             res.render('pages/english/main.ejs')
         }
     );
