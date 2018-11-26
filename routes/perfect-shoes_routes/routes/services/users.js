@@ -1,5 +1,5 @@
-const db = require('../../config/database').connect();
-const Hash = require('./hash');
+const db 	= require('../../../../config/sql').connect_perfectshoes()
+const Hash 	= require('./hash');
 
 const User = function (username, passphrase, mail, name, sampleFile) {
 	return new Promise(async (resolve, reject) => {

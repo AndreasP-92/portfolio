@@ -1,5 +1,6 @@
 const nodeMailer    = require('nodemailer');
-const login         = require('../../bin/aName');
+const login         = require('../../../../config/aName')
+
 
 module.exports = { 
 
@@ -31,8 +32,8 @@ module.exports = {
             port: 465,
             secure: true,
             auth:{
-                user: login.emailUser,
-                pass: login.emailPassword
+                user: login.shopEmailUser,
+                pass: login.shopshopEmailPassword
             },
             tls: {
                 rejectUnauthorized: false
@@ -68,8 +69,8 @@ module.exports = {
             port: 465,
             secure: true,
             auth:{
-                user: login.emailUser,
-                pass: login.emailPassword
+                user: login.shopEmailUser,
+                pass: login.shopEmailPassword
             },
             tls: {
                 rejectUnauthorized: false
@@ -105,8 +106,8 @@ module.exports = {
             port: 465,
             secure: true,
             auth:{
-                user: login.emailUser,
-                pass: login.emailPassword
+                user: login.shopEmailUser,
+                pass: login.shopEmailPassword
             },
             tls: {
                 rejectUnauthorized: false

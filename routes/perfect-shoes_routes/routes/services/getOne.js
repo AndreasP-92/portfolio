@@ -1,4 +1,5 @@
-const db = require('../../config/database').connect()
+const db = require('../../../../config/sql').connect_perfectshoes()
+
 
 module.exports = {
 
