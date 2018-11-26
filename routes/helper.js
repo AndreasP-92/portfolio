@@ -38,4 +38,10 @@ module.exports = (server) => {
     // ************************************************************* Cultural Center ********************************************
 
     require('./culturalCenter_routes/helper.js')(server)
+
+    // ************************************************************* WEB SHOP ********************************************
+
+    require('./perfect-shoes_routes/routes/helper')(server)
+
+
 }
