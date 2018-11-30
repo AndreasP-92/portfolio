@@ -14,7 +14,8 @@ const User = function (username, passphrase, mail, name, sampleFile) {
 			user_mail 				= ?, 
 			user_img 				= ?,
 			resetPasswordToken		= 0,
-			resetPasswordExpires	= 0
+			resetPasswordExpires	= 0,
+			fk_user_role			= 0
 		`
 		db.execute(sql, [username, hash, name, mail, sampleFile], (err, result) => {
 			if (err) reject(err);
