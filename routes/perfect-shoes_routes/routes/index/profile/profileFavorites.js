@@ -11,6 +11,8 @@ module.exports = function (server) {
 
         var getFavorites    =   await getAllWhere.favorites(username);
 
+        console.log('username=====',username)
+
         getProducts = []
 
         console.log(getFavorites[0].profile_favorites)
