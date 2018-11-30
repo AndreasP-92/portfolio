@@ -8,7 +8,7 @@ module.exports = function () {
 	return new GoogleStrategy({
 		'clientID': KEY,
 		'clientSecret': SECRET,
-		'callbackURL': "http://localhost:1337/perfect-shoes/google/callback"
+		'callbackURL': "/perfect-shoes/google/callback"
 	},
 	async function(accessToken, refreshToken, profile, done) {
 		try {
