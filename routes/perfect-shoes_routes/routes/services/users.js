@@ -49,23 +49,24 @@ User.google = function () {};
 
 User.google.findOrCreate = function (key, mail, firstname, lastname, img, displayName) {
 	return new Promise ((resolve, reject) => {
-		db.execute('SELECT google_gKey, google_user, google_displayname FROM tb_googleKeys WHERE google_gKey = ?', [key], (err, result) => {
+		db.execute('SELECT google_gkey, google_user, google_displayname FROM tb_googlekeys WHERE google_gkey = ?', [key], (err, result) => {
 			if (err) reject(err);
+			console.log('result====',result.length)
 			if (result.length){
-				resolve(result[0].google_gKey);
+				resolve(result[0].google_gkey);
 			} else {
-				db.execute('INSERT INTO tb_googleKeys(google_gkey, google_mail, google_displayname) VALUES (?, ?, ?)', [key, mail, displayName], (err, record) => {
+				db.execute('INSERT INTO tb_googlekeys(google_gkey, google_mail, google_displayname) VALUES (?, ?, ?)', [key, mail, displayName], (err, record) => {
 					if (err) reject(err);
 
 					console.log('record=====',record.insertId)
 
 					let googleId = record.insertId
 
-					db.execute('SELECT google_gKey, google_user, google_displayname FROM tb_googleKeys WHERE google_id = ?', [googleId], (err, data) => {
+					db.execute('SELECT google_gkey, google_user, google_displayname FROM tb_googlekeys WHERE google_id = ?', [googleId], (err, data) => {
 						if (err) reject(err);
 
 						console.log('data=====',data)
-						resolve(data[0].google_gKey);
+						resolve(data[0].google_gkey);
 
 					});
 				});
