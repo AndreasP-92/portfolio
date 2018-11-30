@@ -5,15 +5,18 @@ const update            = require('../../services/update');
 module.exports = function (server) {
 
 
-	server.get('/perfect-shoes/profile/favorites', authenticate, async (req, res) => {
+	server.get('/perfect-shoes/profile/favorites', async (req, res) => {
         let username = req.session.username;
+        // let username = 'admin';
 
-        let getFavorites    =   await getAllWhere.favorites(username);
+        var getFavorites    =   await getAllWhere.favorites(username);
+
+        getProducts = []
 
         console.log(getFavorites[0].profile_favorites)
-        let getProducts     =   await getAllWhere.favoriteProducts(getFavorites[0].profile_favorites)
-
-        console.log(getProducts)
+        if(getFavorites[0].profile_favorites != ""){
+            var getProducts     =   await getAllWhere.favoriteProducts(getFavorites[0].profile_favorites)
+        }
 
         
         try {
