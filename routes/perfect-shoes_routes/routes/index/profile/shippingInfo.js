@@ -6,9 +6,19 @@ const update        = require('../../services/update');
 
 module.exports = function (server) {
 	server.get('/perfect-shoes/profile/shippinginfo', authenticate, async (req, res) => {
-		let username = req.session.username;
+        let username = req.session.username;
+        console.log('shippingUser=====',username)
 
-		const getUserInfo = await getAllWhere.shippinginfo(username);
+        var getUserInfo = await getAllWhere.shippinginfo(username);
+        
+
+        if(getUserInfo == ""){
+            await insert.shippingInfo(username)
+
+            var getUserInfo = await getAllWhere.shippingInfo(username)
+        }
+
+        console.log(getUserInfo)
 
 		try {
 			res.render('projects/perfect-shoes/pages/index/profile/dashboard.ejs',{

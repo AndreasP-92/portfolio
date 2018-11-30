@@ -84,6 +84,7 @@ User.google.findOrCreate = function (key, mail, firstname, lastname, img, displa
 
 				db.execute(sqlProfile,[mail, firstname, lastname, img, displayName], (err,data)=>{
 					if(err) reject(err);
+			
 
 				})
 			}
