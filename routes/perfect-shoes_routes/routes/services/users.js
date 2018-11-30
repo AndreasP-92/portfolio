@@ -8,12 +8,13 @@ const User = function (username, passphrase, mail, name, sampleFile) {
 		INSERT INTO 
 			tb_users 
 		SET 
-			user_username 		= ?, 
-			user_passphrase 	= ?, 
-			user_firstname		= ?, 
-			user_mail 			= ?, 
-			user_img 			= ?,
-			resetPasswordToken	= 0
+			user_username 			= ?, 
+			user_passphrase 		= ?, 
+			user_firstname			= ?, 
+			user_mail 				= ?, 
+			user_img 				= ?,
+			resetPasswordToken		= 0,
+			resetPasswordExpires	= 0
 		`
 		db.execute(sql, [username, hash, name, mail, sampleFile], (err, result) => {
 			if (err) reject(err);
