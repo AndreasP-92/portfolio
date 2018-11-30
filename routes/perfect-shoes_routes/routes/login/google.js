@@ -1,5 +1,5 @@
 const passport 			= require('../../middleware/passport');
-const getAllWhere		= require('../services/getAllWHere');
+const getAllWhere		= require('../services/getAllWhere');
 
 module.exports = function (server) {
 
