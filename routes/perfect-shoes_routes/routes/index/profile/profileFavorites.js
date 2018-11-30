@@ -5,7 +5,7 @@ const update            = require('../../services/update');
 module.exports = function (server) {
 
 
-	server.get('/perfect-shoes/profile/favorites', async (req, res) => {
+	server.get('/perfect-shoes/profile/favorites',authenticate, async (req, res) => {
         let username = req.session.username;
         // let username = 'admin';
 
