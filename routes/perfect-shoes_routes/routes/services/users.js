@@ -12,7 +12,8 @@ const User = function (username, passphrase, mail, name, sampleFile) {
 			user_passphrase 	= ?, 
 			user_firstname		= ?, 
 			user_mail 			= ?, 
-			user_img 			= ?
+			user_img 			= ?,
+			resetPasswordToken	= 0
 		`
 		db.execute(sql, [username, hash, name, mail, sampleFile], (err, result) => {
 			if (err) reject(err);
@@ -26,7 +27,7 @@ User.valid = function (username, passphrase) {
 		sql = `
 		SELECT 
 			user_id, 
-			user_passphrase 
+			user_passphrase,
 		FROM 
 			tb_users 
 		WHERE 
