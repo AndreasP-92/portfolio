@@ -1,5 +1,5 @@
 const getAll            = require('../services/getAll');
-const getAllWhere       = require('../services/getAllWHere');
+const getAllWhere       = require('../services/getAllWhere');
 
 module.exports = (server) => {
 
