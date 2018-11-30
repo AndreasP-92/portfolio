@@ -1,5 +1,5 @@
 const stripe            = require('stripe')('sk_test_hAMKkJPjOWFgKvF8RCVogewX')
-const getAllWhere       = require('../../services/getAllWHere');
+const getAllWhere       = require('../../services/getAllWhere');
 const insert            = require('../../services/insert');
 const sendEmail         = require('../../services/sendEmail')
 module.exports = (server) => {

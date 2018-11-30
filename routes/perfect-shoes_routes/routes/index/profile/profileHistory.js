@@ -1,5 +1,5 @@
 const authenticate 		= require('../../../middleware/authenticate');
-const getAllWhere       = require('../../services/getAllWHere');
+const getAllWhere       = require('../../services/getAllWhere');
 
 module.exports = function (server) {
 	server.get('/perfect-shoes/profile/history', authenticate, async (req, res) => {

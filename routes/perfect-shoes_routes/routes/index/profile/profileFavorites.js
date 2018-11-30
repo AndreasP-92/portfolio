@@ -1,5 +1,5 @@
 const authenticate 		= require('../../../middleware/authenticate');
-const getAllWhere       = require('../../services/getAllWHere');
+const getAllWhere       = require('../../services/getAllWhere');
 const update            = require('../../services/update');
 
 module.exports = function (server) {

@@ -1,5 +1,5 @@
 const authenticate 	= require('../../../middleware/authenticate');
-const getAllWhere	= require('../../services/getAllWHere');
+const getAllWhere	= require('../../services/getAllWhere');
 const insert        = require('../../services/insert');
 const update        = require('../../services/update');
 

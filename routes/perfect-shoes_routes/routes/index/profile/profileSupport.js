@@ -1,6 +1,6 @@
 const authenticate 	= require('../../../middleware/authenticate');
 const insert        = require('../../services/insert');
-const getAllWhere	= require('../../services/getAllWHere');
+const getAllWhere	= require('../../services/getAllWhere');
 
 module.exports = function (server) {
 	server.get('/perfect-shoes/profile/support', authenticate, async (req, res) => {
