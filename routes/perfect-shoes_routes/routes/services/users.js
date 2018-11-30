@@ -27,8 +27,7 @@ User.valid = function (username, passphrase) {
 	return new Promise((resolve, reject) => {
 		sql = `
 		SELECT 
-			user_id, 
-			user_passphrase,
+			*
 		FROM 
 			tb_users 
 		WHERE 
