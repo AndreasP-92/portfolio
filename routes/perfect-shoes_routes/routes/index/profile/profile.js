@@ -13,7 +13,7 @@ module.exports = function (server) {
 
 		console.log(validateUser)
 
-		if(validateUser[0].google_displayname <=1){
+		if(validateUser[0].google_displayname >=1){
 			googleProfile = true;
 		}
 

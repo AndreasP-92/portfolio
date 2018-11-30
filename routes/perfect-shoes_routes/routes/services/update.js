@@ -29,6 +29,26 @@ module.exports = {
             })
         })
     },
+    favorites: function(username, favorites){
+        return new Promise ((resolve,reject)=>{
+
+            sql = `
+            UPDATE
+                tb_profiles
+            SET
+                profile_favorites   = '${favorites}'
+            WHERE 
+                profile_username    = '${username}'
+            `
+            db.query(sql,function(err,data){
+                if(err){
+                    reject(err)
+                }else{
+                    resolve(data)
+                }
+            })
+        })
+    },
 
     profilePassword: function(username, password){
         return new Promise (async (resolve,reject)=>{

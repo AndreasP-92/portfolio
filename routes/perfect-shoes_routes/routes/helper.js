@@ -21,6 +21,7 @@ module.exports = (server) => {
     require('./index/profile/profileSupport')(server)
     require('./index/profile/shippingInfo')(server)
     require('./index/profile/profileHistory')(server)
+    require('./index/profile/profileFavorites')(server)
 
     // ADMIN ===============================================================
     

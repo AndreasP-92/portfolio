@@ -33,7 +33,7 @@ module.exports = {
             secure: true,
             auth:{
                 user: login.shopEmailUser,
-                pass: login.shopshopEmailPassword
+                pass: login.shopEmailPassword
             },
             tls: {
                 rejectUnauthorized: false

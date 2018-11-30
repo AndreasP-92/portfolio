@@ -20,7 +20,7 @@ module.exports = (server) => {
 
         try {
             await sendEmail.contact(name, mail, text)
-            res.redirect('/perfect-shoes/contact')
+            res.redirect('/perfect-shoes/')
             
         } catch (error) {
             console.log(error)

@@ -99,7 +99,7 @@ function displayCart(){
         output += `<li class="productBox">
         <img src="/resources/pages/perfect-shoes/resources/media/shop/${cartArray[i].img}" alt="${cartArray[i].name}"/>
         <p class="productInfo">${cartArray[i].name}</p>
-        <p class="productInfo">color: ${cartArray[i].colour}</p> <br>
+        <p class="productInfo">Size: ${cartArray[i].colour}</p> <br>
         <p class="productInfo">${cartArray[i].count} x 
         ${cartArray[i].price} Total 
         ${cartArray[i].total}</p>

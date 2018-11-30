@@ -168,4 +168,7 @@ module.exports = (server) => {
 
         res.redirect('/product/'+productId)
     });
+
+
+
 };

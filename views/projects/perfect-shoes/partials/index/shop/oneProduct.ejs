@@ -9,8 +9,8 @@
             <h1 class="jumbotron-heading">
                 <%= product[0].product_name %>
             </h1>
-            <p class="lead text-muted mb-0">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
-                Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500...</p>
+            <!-- <p class="lead text-muted mb-0">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+                Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500...</p> -->
         </div>
     </section>
     <div class="container">
@@ -47,13 +47,16 @@
 <!-- SELECT COLOUR ================== -->
                         <form action="">
                             <div class="form-group">
-                                <label for="colors">Color</label>
+                                <label for="colors">Size</label>
                                 <select class="custom-select colour-to-cart " name="color" id="colors">
                                 <!-- COLOR =================== -->
                                     <option>Select</option>
-                                    <option value="1">Blue</option>
-                                    <option value="2">Red</option>
-                                    <option value="3">Green</option>
+                                    <option value="1">39</option>
+                                    <option value="2">40</option>
+                                    <option value="3">41</option>
+                                    <option value="3">43</option>
+                                    <option value="3">45</option>
+                                    <option value="3">49</option>
                                 </select>
                                 <div class="afterColour"></div>
                             </div>
@@ -127,6 +130,8 @@
                     <div class="card-header bg-primary text-white text-uppercase">
                         <i class="fa fa-align-justify"></i> Description</div>
                     <div class="card-body">
+                        <p><%- product[0].product_text %></p>
+                        
                         <!-- INCOMMING TEXT -->
                     </div>
                 </div>

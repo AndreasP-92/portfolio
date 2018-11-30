@@ -101,6 +101,39 @@ shoesWithLimit: function (gender) {
             })
         })
     },
+    favorites: function(username){
+        return new Promise((resolve, reject) =>{
+            sql = `
+            SELECT 
+                profile_favorites
+            FROM
+                tb_profiles
+            WHERE
+                profile_username = ?
+            `
+            db.execute(sql, [username], (err,data)=>{
+                if(err)reject(err);
+                resolve(data)
+            })
+        })
+    },
+    favoriteProducts: function(productId){
+        return new Promise((resolve, reject) =>{
+            console.log(productId)
+            sql = `
+            SELECT 
+                *
+            FROM
+                tb_products
+            WHERE
+                product_id IN (${productId})
+            `
+            db.execute(sql, [productId], (err,data)=>{
+                if(err)reject(err);
+                resolve(data)
+            })
+        })
+    },
     profileEmail: function(mail){
         return new Promise ((resolve,reject)=>{
             sql = `
