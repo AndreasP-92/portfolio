@@ -17,7 +17,7 @@ module.exports = {
                 profile_img         = ?,
                 profile_username    = ?,
                 profile_favorites   = 0,
-                fk_user_role        = 0`;
+                fk_users_role        = 0`;
             db.query(sql,[mail, firstname, lastname, img, username], function (err, data){
                 if (err){
                     reject(err)
