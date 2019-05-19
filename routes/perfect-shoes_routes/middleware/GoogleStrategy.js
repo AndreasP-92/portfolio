@@ -2,7 +2,7 @@ const KEY 		="898757410913-71vupmo6fdinapgo8693r0k1e26cjtuo.apps.googleuserconte
 const SECRET 		= "JIkrWF-gxTPoOtuvtttR4Kp2";
 const User 		= require('../routes/services/users');
 const GoogleStrategy 	= require('passport-google-oauth').OAuth2Strategy;
-const insert			= require('../routes/services/insert');
+const insert		= require('../routes/services/insert');
 
 console.log()
 module.exports = function () {
