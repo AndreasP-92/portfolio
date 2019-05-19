@@ -16,7 +16,7 @@ class App extends React.Component{
         <nav className="mainNav">
           <ul>
             <li>
-              <a href="https://mrcaptain.info">Home</a>
+              <a href="https://net-designer.com">Home</a>
             </li>
             <li>
               <Link to="/react/weatherapp">Weather App</Link>

@@ -4,11 +4,13 @@ const User 				= require('../routes/services/users');
 const GoogleStrategy 	= require('passport-google-oauth').OAuth2Strategy;
 const insert			= require('../routes/services/insert');
 
+console.log()
 module.exports = function () {
 	return new GoogleStrategy({
 		'clientID': KEY,
 		'clientSecret': SECRET,
-		'callbackURL': "https://mrcaptain.info/perfect-shoes/google/callback"
+		'callbackURL': "http://localhost:1337/perfect-shoes/google/callback"
+		// 'callbackURL': "https://mrcaptain.info/perfect-shoes/google/callback"
 	},
 	async function(accessToken, refreshToken, profile, done) {
 		try {
