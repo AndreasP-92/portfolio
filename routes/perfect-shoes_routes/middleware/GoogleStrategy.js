@@ -4,7 +4,6 @@ const User 		= require('../routes/services/users');
 const GoogleStrategy 	= require('passport-google-oauth').OAuth2Strategy;
 const insert		= require('../routes/services/insert');
 
-console.log()
 module.exports = function () {
 	return new GoogleStrategy({
 		'clientID': KEY,

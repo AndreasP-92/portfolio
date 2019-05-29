@@ -66,4 +66,10 @@ module.exports = function (server) {
             res.render('pages/english/contact.ejs')
         }
     );
+    server.get('/pdf',
+    function (req, res) {
+        res.render('pages/english/pdf.ejs')
+        // res.render('pages/english/pdf/web/viewer.ejs')
+    }
+);
 }
